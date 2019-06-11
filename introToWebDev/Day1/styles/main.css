@@ -1,0 +1,32 @@
+h1 {
+    background-color:lightskyblue;
+    color:white;
+}
+
+/* if you have x.y, only x's with the class of y will be effected */
+p.yellow{
+    background-color: yellow;
+}
+
+/* Strung together css elements will only work on tags with BOTH attributes. In this case, only something with class="yellow oblique" will have this styling applied */
+.yellow.oblique {
+    background-color: yellow;
+    font-style: oblique;
+}
+
+
+/* Descendants -> .x .y -> .y will apply to descendants of .x /// for example, a list of links, using this can change <a> tags of only one list. It doesn't have to be a direct descandant, and keeping these more general is better. */
+.polygon .yellow{
+    background-color: yellow;
+}
+.polygon .oblique {
+    font-style: oblique;
+}
+.polygon .red{
+    background-color: red;
+}
+
+/* Apply one style to different styles, but don't require both */
+.caramel, .pumpkin {
+	background: blue;
+}

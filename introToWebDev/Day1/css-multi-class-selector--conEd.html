@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multiple Selector Exercise!</title>
+	<!-- Below is a font, we'll learn more about this later! -->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Work+Sans" rel="stylesheet">
+
+	<!-- Scroll down for exercise instructions! -->
+
+	<style>
+		/* setting base styles on the body */
+		body {
+			font-family: 'Work Sans', sans-serif;
+			font-size: 16px;
+			text-align: center;
+		}
+
+		/* styling our h1 */
+		h1 {
+			font-size: 45px;
+			padding: 20px 0;
+			margin: 0;
+			background-color: peachpuff;
+			font-family: 'Pacifico', cursive;
+			
+		}
+
+		/* styling our h2 */
+		h2 {
+			padding: 20px 0;
+			margin: 0;
+			font-size: 28px;
+			background-color: burlywood;
+		}
+
+		/* styling our unordered list */
+		ul {
+			list-style: none;
+			font-size: 25px;
+			padding-left: 0;
+		}
+
+		/* styling our li items */
+		li {
+			padding: 10px 0;
+		}
+
+		/* TO DO:  */
+		/* 1. Write the CSS selector to change all soups that have noodle and protein to a background color of lightsteelblue */
+		.noodle.protein {
+		    background: lightsteelblue;
+		}
+
+		/* 2. Write the CSS selector to change the font-size for all soups that have pumpkin as well as nuts: */
+		.pumpkin.nuts {
+			font-size: 20px;
+		}
+
+		/* 3. Write the CSS selector to change all soups that have spice as well as noodle to the background of red */
+		.noodle.spice {
+			background: red;
+		}
+
+		/* 4. Write the CSS selector to change all soups that have protein as well as cream to have the darkgoldenrod font colour */
+		.protein.cream {
+			color: darkgoldenrod;
+		}
+
+		/* 5. Try it out on your own! Write your own declaration by selecting soups that have both the class of cream and nuts and change the font size to 35px and the background to the colour of rebeccapurple. */
+		.cream.nuts{
+			font-size: 35px;
+			background-color: rebeccapurple;
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		}
+
+
+	</style>
+</head>
+<body>
+	<h1>Scrumptious Soups</h1>
+	<h2>Today's Specials</h2>
+	<ul class="soups">
+		<li class="noodle spice">Spaghetti & Cardamom</li>
+		<li class="cream nuts">Cream of Almonds</li>
+		<li class="noodle protein">Chicken Noodle</li>
+		<li class="pumpkin nuts">Pumpkin Pecan-Praline</li>
+		<li class="spice noodle">Spicy Lasagna Bowl</li>
+		<li class="noodle protein">Beans with Risotto</li>
+		<li class="cream nuts">Cashews and Cream</li>
+		<li class="pumpkin nuts">Maple Walnut Pumpkin</li>
+		<li class="spice noodle">Pepper & Ravioli</li>
+		<li class="protein cream">Tofu with Alfredo</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Exercise</title>
+	<style>
+		/* Here we are putting the CSS right into our HTML file, more on this in future days! */
+
+		/* Play around with the styles - change colours and values to see what happens! */
+
+		/* The body styles are inherited by all elements on the page */
+		body {
+			background: rgb(86, 103, 151);
+			color: dimgray;
+			font-family: 'Times New Roman', Times, serif;
+		}
+
+		/* This styles all of the h1s on the page */
+		h1 {
+			color: rgb(131, 213, 233);
+			font-size: 50px;
+			margin: 0;
+			text-shadow: 2px 2px 1px rgb(53, 147, 170);
+		}
+
+		/* This styles all of the h2s and ps on our page */
+		h2,
+		p {
+			font-family: Georgia;
+			font-weight: 100;
+		}
+
+		/* Change the font style of our h3 to normal */
+		h3 {
+			font-style: bold;
+			color: rgb(143, 188, 151);
+		}
+
+		/* p targets all paragraphs*/
+		p {
+			line-height: 30px;
+		}
+
+		/* strong targets all strong elements */
+		strong {
+			font-weight: 700;
+		}
+
+		/* We have a div with the class of "wrapper". We'll learn more about classes soon! */
+		.wrapper {
+			padding: 50px;
+			margin: 20px auto;
+			width: 700px;
+			background: white;
+			border: 5px solid rgb(200, 251, 255);
+		}
+
+		/* this styles an img that is nested in an element with the class of description */
+		.description img {
+			padding-right: 30px;
+		}
+
+	</style>
+</head>
+	<body>
+		<!-- START of main  -->
+		<main class="wrapper">
+			<h1>Kittens Court</h1>
+			<h2>Hands-on, petting-based learning from industry leading kittens.</h2>
+			<!-- START of section .description -->
+			<section class="description">
+				<h3>What are dogs, just cats here.</h3>
+				<img src="https://placekitten.com/650/300" alt="Students Learning CSS">
+				<p><strong>Kitten Petter</strong> : a person pets kittens, it brings this person sheer joy and happiness. It's about turning <em>ideas into reality</em>. Here at Kittens Meow Yes Yeah, your ideas are a reality.</p>
+				<p>Founded by the team that introduced Cats Rule The World in 2011, Kittens Meow Yes Yeah is the best way to learn to pet kittens. The recipe? Hands-on, petting based learning from industry-leading professionals. Small kittens, and a 1:1 ratio of petters to kittens. Hosted in learning environments that inspire. <strong>That's Kittens Court.</strong></p>
+			</section>
+			<section class="testimonials">
+				<h3>Look at all these catisfied customeowrs!</h3>
+				<article>
+					<img src="https://placekitten.com/650/400" alt="">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, eum unde labore cupiditate vero dicta commodi, ex magnam dignissimos cum non consectetur excepturi incidunt dolore?</p>	
+				</article>
+			</section>
+			<!-- END of section .description -->
+		</main>
+		<!-- END of main -->
+	</body>
+</html>
