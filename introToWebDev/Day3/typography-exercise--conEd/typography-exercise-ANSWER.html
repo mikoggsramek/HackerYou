@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Exercise</title>
+	<style>
+		/* this helps us keep our sizing predictable. We will be talking about in future classes */
+		html {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+
+		/* Some base body styles. Don't forget that typographic elements on a parent are inherited to their children */
+		body {
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-weight: 300;
+			background: linear-gradient(-25deg, #80E2CF, #42CFC5);
+			color: #333;
+			font-size: 16px;
+		}
+
+		.wrapper {
+			width: 800px;
+			margin: 20px auto;
+			background :#fff;
+			padding: 20px;
+			border: 1px solid #8c97c3;
+		}
+
+		/* select the header and give it the default styling both the h1 and h2 share using the power of inheritance */
+		header {
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		/* Select the h1 tag and style the text like the answer key */
+		h1 {
+			letter-spacing: 15px;
+			font-size: 55px;
+			margin: 5px;
+		}
+
+		/* Style the h2 in the header (not all of the h2s!) */
+		header h2 {
+			letter-spacing: 10px;
+		}
+
+		/* Write a rule to change all spans with the class of hackerYou to the color */
+		span.myComputer {
+			color: #D12026;
+		}
+
+		/* Style all sections with the following:
+		Add a background pattern from the images folder - noisy_grid.png,
+		a border that is 1px thick, dotted, and color of #C4C4C4,
+		add a margin and padding of 10px on all sides. */
+		section {
+			background: url(images/noisy_grid.png);
+			border: 1px dotted #C4C4C4;
+			margin: 10px;
+			padding: 10px;
+		}
+
+		/* Style the h2 tags within the sections. Try using rgba for a semi-transparent background */
+		section h2 {
+			background: rgba(0,0,0,0.3);
+			color: #fff;
+			padding: 5px;
+			font-size: 15px;
+		}
+
+		/* Now it's up to you! Match the styles of the 8 rule boxes in the answer key by writing the proper selectors and applying the correct typography CSS */
+		.ruleBox1 p {
+			line-height: 2.5;
+		}
+
+		.ruleBox2 p {
+			font-weight: 600;
+			font-style: italic;
+		}
+
+		.ruleBox3 ul li {
+			letter-spacing: 10px;
+		}
+
+		.ruleBox3 ul li.tight {
+				letter-spacing: -2px;
+		}
+
+		.firstParagraph {
+			text-align: right;
+		}
+
+		.secondParagraph {
+			text-align: center;
+		}
+
+		.thirdParagraph {
+			text-align: justify;
+		}
+
+		.ruleBox5 p {
+			font-size: 20px;
+		}
+
+		.ruleBox5 {
+			border-radius: 4px 35px;
+		}
+
+		span.hugeRed {
+			font-size: 35px;
+			color: red;
+		}
+			
+		span.smallBlue {
+			font-size: 10px;
+			color: blue;
+		}
+
+		.ruleBox6 h2 {
+			text-align: right;
+			text-transform: uppercase;
+		}
+
+		.ruleBox7 h2 {
+			text-align: center;
+			text-transform: capitalize;
+		}
+		
+		.ruleBox8 {
+			text-transform: lowercase;
+			border-radius: 10px;
+		}
+
+		footer {
+			text-align: center;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>CSS Typography</h1>
+			<h2>Styled with style at <span class="myComputer">my computer</span></h2>
+		</header>
+		<section class="ruleBox1">
+			<h2>Line Height</h2>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+		</section>
+		<section class="ruleBox2">
+			<h2>Font Weight and Font Style</h2>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
+		</section>
+		<section class="ruleBox3">
+			<h2>Letter Spacing</h2>
+			<ul>
+				<li>Milk</li>
+				<li>Bread</li>
+				<li>Eggs</li>
+				<li class="tight">Beer</li>
+			</ul>
+		</section>
+		<section class="ruleBox4">
+			<h2>Aligned Text</h2>
+			<p class="firstParagraph"><strong>Right aligned: </strong>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
+			<p class="secondParagraph"><strong>Center aligned: </strong>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
+			<p class="thirdParagraph"><strong>Justified: </strong>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit ameta.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit ameta.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit ameta.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit ameta.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit ameta.</p>
+		</section>
+		<section class="ruleBox5">
+			<h2>Font Sizes</h2>
+			<p>This is a single paragraph that has a font size of 20, but we can wrap text in spans <span class="hugeRed">to alter their styles</span> within a paragraph elements. <span class="smallBlue">Any way we like it!</span></p>
+		</section>
+		<section class="ruleBox6">
+			<h2>Right and Uppercase</h2>
+		</section>
+		<section class="ruleBox7">
+			<h2>centered and capitalized</h2>
+		</section>
+		<section class="ruleBox8">
+			<h2>Left and Lowercase</h2>
+		</section>
+		<footer>
+			<p>Made with love by the <abbr title="Awesome People Association">APA</abbr></p>
+		</footer>
+	</div>
+</body>
+</html>

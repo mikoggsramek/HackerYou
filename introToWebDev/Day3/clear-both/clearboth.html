@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Clear:Both?</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<!-- 
+	This exercise will get you use floats and clearing both to stop floats on sibling elements. If you need help, check out the Layout class, and find the Clear:Both topic.
+	-->
+
+	<!-- 
+	Exercise: 
+	1. style the following section to look like feature.png in a 3x3 grid 
+	
+	-->
+
+	<style>
+		/*BASE STYLES HERE, DON'T WORRY TO MUCH ABOUT THIS*/
+		 *{
+		 	box-sizing: border-box;
+		 	margin: 0;
+		 	padding: 0;
+		 }
+
+		 .clearfix:after {
+		 	visibility: hidden;
+		 	display: block;
+		 	font-size: 0;
+		 	content: " ";
+		 	clear: both;
+		 	height: 0;
+		 } 
+
+		 body{
+		 	font-family: 'Lato', sans-serif;
+		 	padding: 50px 0;
+		 }
+
+		  .feature i{
+		 	font-size: 30px;
+		 	display: inline-block;
+		 	margin-right: 10px;
+		 }
+
+		 .wrapper{
+		 	max-width: 1000px;
+		 	margin: 0 auto;
+		 }
+
+		 /*WRITE YOUR STYLES HERE!*/
+		 .wrapper .feature {
+			 float: left;
+			 width: 33%;
+			 margin: 10px 0;
+		 }
+		 .wrapper .feature .icon {
+			 float: left;
+		 }
+		 .wrapper .feature p {
+			 clear:both;
+		 }
+	
+	</style>
+</head>
+<body>
+	<!-- style the following section to look like feature.png in a 3x3 grid -->
+	<section class="features">
+		<div class="wrapper clearfix">
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, minima?</p>
+			</div>
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Tempora amet voluptates impedit odit beatae, veritatis at dolorem rem.</p>
+			</div>
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Sint ipsa est doloribus repellat sapiente nam quos magnam labore.</p>
+			</div>
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Totam blanditiis delectus numquam cupiditate vero perferendis id dicta ratione.</p>
+			</div>
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Voluptatem similique sed cumque autem exercitationem porro, hic et ipsam!</p>
+			</div>
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Magnam nobis, quam ut quisquam dicta illo officiis explicabo nemo.</p>
+			</div>
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Obcaecati explicabo in tenetur debitis alias labore magni enim nemo.</p>
+			</div>
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Alias laboriosam sed dolor atque ipsa quaerat quas a neque!</p>
+			</div>
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Quibusdam atque id ex veniam praesentium non fuga nulla earum.</p>
+			</div>
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Magni a quis quam odio, non deserunt consectetur nostrum distinctio.</p>
+			</div>
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Enim delectus ratione itaque cumque error nisi, dolorem amet eligendi.</p>
+			</div>
+			<div class="feature">
+				<i class="icon fa fa-plus-circle"></i>
+				<h2>Product Feature</h2>
+				<p>Velit at nesciunt magnam repudiandae autem qui minima veniam numquam.</p>
+			</div>
+		</div>
+				
+	</section>
+	
+</body>
+</html>

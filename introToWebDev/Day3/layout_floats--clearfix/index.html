@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clearfix</title>
+
+    <style>
+        .clearfix:after {visibility: hidden; display: block; font-size: 0; content:''; clear: both; height: 0; }
+        h1 {
+            font-size: 60px;
+            font-weight: 400;
+        }
+
+        h2 {
+            margin: 60px 0 30px;
+        }
+
+        nav {
+            background-color:aliceblue;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border: 5px solid grey;
+        }
+
+        ul a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        ul li {
+            float: left;
+            width: calc( 100% / 4);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header {
+            background-image: url(./assets/blue.jpg);
+            background-size: cover;
+            background-position: top;
+            color: white;
+        }
+
+        h3 {
+            padding: 150px 50px;
+            font-size: 60px;
+            float: right;
+            color: #555;
+        }
+
+        article {
+            border: 5px solid grey;
+        }
+
+        article .text {
+            float: left;
+            width: 70%;
+            padding: 30px 70px;
+            box-sizing: border-box;
+            color: #555;
+        }
+
+        article img {
+            float: left;
+            width: 30%;
+        }
+
+        article h4 {
+            font-size: 30px;
+        }
+
+        .load {
+            background-color: rgb(230, 225, 243);
+            padding: 10px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+        }
+
+        .load-circle {
+            background-color: rgb(205, 175, 227);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            float: left;
+            margin: 0 5px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Clearfix Fixes 🛠️ </h1>
+
+    <!-- nav bar -->
+    <h2>This nav bar below is looking a little sparce...</h2>
+    <p>There is a light blue background applied that should be showing....</p>
+    <nav>
+        <ul class="clearfix">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- article -->
+    <h2>This article's looking a bit funky...</h2>
+    <p>The grey border on the article should be wrapping around the fineapple and the text.</p>
+    <article class="clearfix"> 
+        <img src="assets/fineapple.jpg" alt="A pineapple with sunglasses.">
+        <div class="text">
+            <h4>Fineapple Amiright</h4>
+            <p>All the words for this article linked here pineapples omg i love pineapples like get the hecck out of here. Tastes fly and looks fly, what more could you be out here asking for?</p>
+        </div>
+    </article>
+
+    <!-- load bar -->
+    <h2>This Load bar is looking wonky...</h2>
+    <p>This load bar has a lavender background that should be holding the load circles.</p>
+    <div class="load clearfix">
+        <div class="load-circle"></div>
+        <div class="load-circle"></div>
+        <div class="load-circle"></div>
+        <div class="load-circle"></div>
+        <div class="load-circle"></div>
+        <div class="load-circle"></div>
+        <div class="load-circle"></div>
+    </div>
+
+</body>
+</html>

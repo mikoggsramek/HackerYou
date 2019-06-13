@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SOLUTION Two Column</title>
+    <!-- load in google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:500|Raleway:400,700" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.35;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            margin: 25px auto;
+            border: 2px solid grey;
+        }
+
+        header,
+        section,
+        aside,
+        footer {
+            padding: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        a {
+            border: none;
+            padding: 10px;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+            cursor: pointer;
+            background: #eee;
+            color: black;
+            text-decoration: none;
+            display: block;
+            margin: 15px 0;
+        }
+
+        a:hover {
+            background: black;
+            color: white;
+        }
+
+        h2 {
+            text-shadow: 2px 2px 0 #000;
+            font-size: 38px;
+            font-weight: 700;
+        }
+
+        p {
+            font-weight: 700;
+            text-shadow: 1px 1px 0 #000;
+            font-size: 21px;
+            background-color: rgba(0, 0, 0, 0.45);
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+            padding: 0;
+        }
+
+        section {
+            padding: 80px 60px;
+            color: white;
+            background-image: url(./assets/boat.jpg);
+            background-size: cover;
+            background-position: center;
+            float: left;
+            width: 60%;
+        }
+
+        aside {
+            background-image: url(./assets/green.jpg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            float: left;
+            width: 40%;
+        }
+
+        footer {
+            background: black;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+            padding: 7px;
+            margin: 0;
+            color: white;
+            clear: both;
+        }
+
+        footer p {
+            padding: 0;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper clearfix">
+        <header>
+            <h1>- Vacay -</h1>
+        </header>
+
+        <section>
+            <h2>We got Vacations</h2>
+            <p>We got, such vacations. Don't even worry about it. Are you worried because you should not be.</p>
+        </section>
+
+        <aside>
+            <ul>
+                <li>
+                    <a href="#">Get Relaxing Vacays</a>
+                </li>
+                <li>
+                    <a href="#">Get Exciting Vacays</a>
+                </li>
+                <li>
+                    <a href="#">Get Adventurous Vacays</a>
+                </li>
+                <li>
+                    <a href="#">Get Educational Vacays</a>
+                </li>
+            </ul>
+        </aside>
+
+        <footer>
+            <p>Vacay - Copyright 2018</p>
+        </footer>
+    </div>
+</body>
+
+</html>

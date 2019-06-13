@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>CSS Exercise</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+
+		/* 
+			Write a selector for the div element with a class of 'wrapper' and apply the following with CSS:
+			- Set the wrapper to 800px wide
+			- Apply 100px of margin all around
+			- Add 20px of padding all around
+			- Change the background to lightcyan
+		*/
+
+		.wrapper {
+			width: 800px;
+			margin: 100px;
+			padding: 20px;
+			background: lightcyan;
+		}
+
+		/*
+			Write a selector for all paragraphs in the page
+			set the line height of the paragraphs to 25px ( line-height:25px; )
+		*/
+		p {
+			line-height: 25px;
+		}
+		/* 
+			Write a selector that will select a section with a class of 'description' and apply the following with CSS
+			- Turn the background lightgray
+			- Add 20px of padding all around
+		*/
+
+		.description {
+			background: lightgray;
+			padding: 20px;
+		}
+
+			/* 
+				Write a selector to get the h2 tag inside of the section with a class of description and set it's margin to zero
+			*/
+			.description h2 {
+				margin: 0;
+			}
+
+			/* 
+				Write a selector for the ul tag inside of the section with a class of description and apply padding to it's left side only.
+			*/ 
+			.description ul {
+				padding-left: 20px;
+			}
+			/* 
+				Select all li elements inside of the ul, that is inside of the section with a class of description and apply the follow CSS to them.
+				- Make the background cadetblue
+				- Add padding of 5px all around
+				- Add margin of 2px all around
+			*/
+
+				.description ul li {
+					background: cadetblue;
+					margin: 2px;
+					padding: 5px;
+				}
+
+			/*
+				Select all blockquote elements on the page and apply the following CSS to them.
+				- Set a background of #90EE90
+				- Set the margin to 30px all around
+				- Set the padding to 20px all around
+			*/
+			blockquote {
+				background: #90EE90;
+				margin: 30px;
+				padding: 20px;
+			}
+
+			/*
+				Select the section with a class of moreInfo and apply the following CSS to it.
+				- Change the background to #88CC9B
+				- Set the width to 50%
+				- Set the padding to 10% all around
+				- Set the margin to 15% all around
+			*/
+			.moreInfo {
+				background: #88CC9B;
+				width: 50%;
+				padding: 10%;
+				margin: 15%;
+			}
+	</style>
+</head>
+	<body>
+		<main>
+			<div class="wrapper">
+				<section class="intro">
+					<h1>Padding and Margin Exercise!</h1>
+					<p>Brownie sugar plum tootsie roll macaroon pastry cupcake. Faworki macaroon jelly jelly beans muffin liquorice dragee muffin wafer. Fruitcake gummies tiramisu chocolate bar. Wafer biscuit chocolate cheesecake gummies wafer marzipan danish. Chocolate bar macaroon carrot cake muffin pudding. Souffle toffee pastry sweet roll. Carrot cake gummi bears chocolate cookie marshmallow. Sugar plum macaroon gingerbread donut chocolate bar toffee. Cupcake lollipop jelly toffee faworki. Chocolate bar marshmallow wafer dragee jelly dessert applicake marshmallow wypas. Ice cream topping donut. Liquorice fruitcake halvah dragee bonbon.</p>
+				</section>
+
+				<section class="description">
+					<h2>Description</h2>
+					<p>Wafer marshmallow macaroon applicake icing macaroon marshmallow sesame snaps. Caramels pie marshmallow wafer cotton candy pastry jelly cheesecake carrot cake. Applicake cupcake cupcake sweet roll jelly-o jujubes sweet tiramisu gummi bears. Marzipan pudding sugar plum. Donut pastry lemon drops. Tiramisu gummies lollipop. Brownie sugar plum sugar plum gingerbread marshmallow tart sugar plum gummi bears. Souffle gummi bears lemon drops cake candy canes. Tiramisu jujubes gummies chocolate bar dessert tootsie roll. Caramels chocolate cake ice cream cupcake jujubes wypas applicake gingerbread brownie. Icing tart jelly beans candy gummi bears chocolate bar dessert cake. Oat cake dessert caramels. Tiramisu cheesecake cotton candy.</p>
+					<ul>
+						<li>Bread</li>
+						<li>Milk</li>
+						<li>Cookies</li>
+						<li>Beer</li>
+						<li>Cat Litter</li>
+					</ul>
+					<blockquote>Cookie topping jelly cheesecake fruitcake. Pudding jelly-o icing. Souffle souffle muffin cake lollipop ice cream. Gummies gingerbread dessert.</blockquote>
+				</section>
+
+				<section class="moreInfo">
+					<h2>More Info</h2>
+					<ol>
+						<li>One</li>
+						<li>Two</li>
+						<li>Three</li>
+						<li>Four</li>
+						<li>Five</li>
+					</ol>
+					<p>Candy canes liquorice chocolate bar tootsie roll fruitcake. Jelly beans dessert pudding. Lemon drops cotton candy souffle candy applicake chocolate cake lemon drops jelly beans. Wafer icing lemon drops applicake icing chocolate cake tiramisu cheesecake jujubes. Croissant souffle fruitcake. Fruitcake icing chocolate topping. Chupa chups applicake tart sugar plum. Danish tootsie roll jelly beans pie. Sugar plum powder applicake lollipop faworki. Cupcake sugar plum wafer biscuit candy canes brownie fruitcake. Pudding cookie tart candy wypas halvah brownie jelly beans lollipop. Wafer croissant apple pie oat cake toffee powder bear claw chocolate bar. Croissant pie donut powder halvah gummi bears gummi bears jelly oat cake.</p>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>

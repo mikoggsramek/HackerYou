@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gallery Layout</title>
+	<!-- 
+		This exercise will focus on creating a gallery layout using floats, the box model, and widths. If you need a review, check out the Layout class.
+	 -->
+	 <!-- 8. Make the h1 title "Pacifico" from Google Fonts -->
+	 <!-- 9. Change all the h3 to "Indie Flower" from Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico" rel="stylesheet">
+	<style>
+
+		/*
+		Exercise:
+		1. Add a left float to all of the .item divs
+		
+			** Note ** the "cowboy" image is 1px longer/taller than the rest of the images (inspect element to see the heights). When we have different sized images in a gallery like this the next line of floated items will get 'stuck' on the longer element, which will break the flow of our layout. In order to control for this, we should add a "max-height: 199px;" on all of our images, so they are no larger than the smallest image, which in our case is 199px. 
+
+		2. Add margin of 10px and padding of 5px to the .item divs
+		3. Add a max-width of 100% to the images to make sure that they resize in their parent element
+		4. Style .item with a border of 1px grey solid and apply a background-color (your choice!)
+		5. Add a box-shadow to each item
+		6. Change the width of .wrapper to max-width: 1280px
+		7. Resize your browser and make sure that the footer doesn't come up beside your gallery content - apply a clear:both to the footer
+		8. Fill the alt text for all images. Use something descriptive and meaningful for a screen reader.
+		9. Make the h1 title "Pacifico" from Google Fonts
+		10. Change all the h3 to "Indie Flower" from Google Fonts
+		11. Align the copyright text in the footer to the right and link it to the HackerYou site
+		12. Add a hover to the items so that the background colour changes
+		13. Add a gradient to the background of the whole page
+		***BONUS***
+		Add an aside sidebar to the gallery on the left that contains small thumbnails of "Featured Exhibits" in a 2x4 layout 
+		*/
+
+		.clearfix:after {
+		  visibility: hidden;
+		  display: block;
+		  font-size: 0;
+		  content: " ";
+		  clear: both;
+		  height: 0;
+		}
+
+		header {
+			border-bottom: 2px solid black;
+		}
+		
+		.item {
+			width: 300px;
+			text-align: center;
+			/*1. Add a left float to all of the .item divs*/
+			float: left;
+			/*2. Add margin of 10px and padding of 5px to the .item divs*/
+			margin: 10px;
+			padding: 5px;
+			/*4. Style .item with a border of 1px grey solid and apply a background-color (your choice!)*/
+			border: 1px solid darkcyan;
+			/*5. Add a box-shadow to each item*/
+			box-shadow: 10px 5px 5px black;
+		}
+
+		.wrapper {
+			/*6. Change the width of .wrapper to max-width: 1280px*/
+			max-width: 1280px;
+			margin: 0 auto;
+		}
+
+		/*3. Add a max-width of 100% to the images to make sure that they resize in their parent element*/
+		img {
+			max-width: 100%;
+			/* Some of the images are a little larger than the others, so we can add a max-height to control this from breaking the layout - just use the height of the smallest image. In our case this is 199px */
+			max-height: 199px;
+		}
+		/*7. Resize your browser and make sure that the footer doesn't come up beside your gallery content - apply a clear:both to the footer*/
+		footer {
+			clear: both;
+		}
+
+		/*8. Make the h1 title "Pacifico" from Google Fonts*/
+		h1 {
+			font-family: 'Pacifico', cursive;/*Don't forget that google fonts conveniently give you the best font stack for your chosen font*/
+		}
+
+		/*9. Change all the h3 to "Indie Flower" from Google Fonts*/
+		h3 {
+			font-family: 'Indie Flower', cursive; /*Don't forget that google fonts conveniently give you the best font stack for your chosen font*/
+		}
+
+		/*10. Align the copyright text in the footer to the right and link it to the HackerYou site*/
+		footer p {
+			text-align: right;
+		}
+
+		/*11. Add a hover to the items so that the background colour changes*/
+		.item:hover {
+			background: darkcyan;
+		}
+
+		/*12. Add a gradient to the background of the whole page*/
+		body {
+			background: linear-gradient( 45deg, #E6DADA, #274046); /*gradient from http://uigradients.com/#Winter*/
+		}
+
+		/****BONUS***
+		Add an aside sidebar to the gallery on the left that contains small thumbnails of "Featured Exhibits" in a 2x4 layout */
+		aside {
+			width: 30%;
+			float: left;
+		}
+		aside .sidebar {
+			float: left;
+			width: 50%;
+		}
+		.gallery {
+			width: 70%;
+			float: left;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper clearfix">
+		<header>
+			<h1>Horse Gallery</h1>
+		</header>
+		<!-- BONUS: Add an aside sidebar to the gallery on the left that contains small thumbnails of "Featured Exhibits" in a 2x4 layout -->
+		<aside class="clearfix">
+			<h2>Featured Exhibits</h2>
+			<div class="sidebar">
+				<img src="images/bay-horse.jpg" alt="Bay horse surrounded by fallen branches">
+			</div>
+			<div class="sidebar">
+				<img src="images/cowboy.jpg" alt="Cowboy on horse with lantern">
+			</div>
+			<div class="sidebar">
+				<img src="images/farrier-with-rasp.jpg" alt="Cowboy cleaning off rasp tool">
+			</div>
+			<div class="sidebar">
+				<img src="images/horses-in-field.jpg" alt="Aerial view of two horses in a green field">
+			</div>
+		</aside>
+
+		<section class="gallery clearfix">
+
+			<h2>Gallery</h2>
+
+			<div class="item">
+				<img src="images/bay-horse.jpg" alt="Bay horse surrounded by fallen branches">
+				<h3>Bay Horse</h3>
+			</div>
+
+			<div class="item">
+				<img src="images/chestnut-with-blaze.jpg" alt="Close up of a horse's head">
+				<h3>Chestnut with blaze</h3>
+			</div>
+
+			<div class="item">
+				<img src="images/cowboy.jpg" alt="Cowboy on horse holding a lit latern">
+				<h3>Cowboy</h3>
+			</div>
+
+			<div class="item">
+				<img src="images/farrier-with-rasp.jpg" alt="Farrier with rasp">
+				<h3>Farrier with rasp</h3>
+			</div>
+
+			<div class="item">
+				<img src="images/herd-of-horses.jpg" alt="Herd of horses in a field">
+				<h3>Herd of horses</h3>
+			</div>
+
+			<div class="item">
+				<img src="images/horses-in-field.jpg" alt="Birds eye view of two horses in a field">
+				<h3>Horses in field</h3>
+			</div>
+
+		</section>
+
+		<footer>
+		<!-- 10. Align the copyright text in the footer to the right and link it to the HackerYou site -->
+			<p>All horse images are from <a href="http://hackeryou.com">unsplash.com</a></p>
+		</footer>
+
+	</div>
+
+</body>
+</html>

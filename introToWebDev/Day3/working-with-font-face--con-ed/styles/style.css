@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'ZCOOL_KuaiLe';
+    src: url("../font/ZCOOL_KuaiLe/ZCOOLKuaiLe-Regular.ttf");
+}
+
+h1 {
+    font-family: 'ZCOOL_KuaiLe';
+}

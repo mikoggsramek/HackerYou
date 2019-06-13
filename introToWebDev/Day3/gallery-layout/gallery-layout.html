@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico&display=swap" rel="stylesheet">
+
+	<title>Gallery Layout</title>
+	<!-- 
+		This exercise will focus on creating a gallery layout using floats, the box model, and widths. If you need a review, check out the Layout class.
+	 -->
+	<style>
+		/*
+		Exercise:
+		1. Add a left float to all of the .item divs 
+
+			** Note ** the "cowboy" image is 1px longer/taller than the rest of the images (inspect element to see the heights). When we have different sized images in a gallery like this the next line of floated items will get 'stuck' on the longer element, which will break the flow of our layout. In order to control for this, we should add a "max-height: 199px;" on all of our images, so they are no larger than the smallest image, which in our case is 199px. 
+
+		2. Add margin of 10px and padding of 5px to the .item divs
+		3. Add a max-width of 100% to the images to make sure that they resize in their parent element
+		4. Style .item with a border of 1px grey solid and apply a background-color (your choice!)
+		5. Add a box-shadow to each item
+		6. Change the width of .wrapper to max-width: 1280px
+		7. Resize your browser and make sure that the footer doesn't come up beside your gallery content - apply a clear:both to the footer
+		8. Fill the alt text for all images. Use something descriptive and meaningful for a screen reader.
+		9. Make the h1 title "Pacifico" from Google Fonts
+		10. Change all the h3 to "Indie Flower" from Google Fonts
+		11. Align the copyright text in the footer to the right and link it to the HackerYou site
+		12. Add a hover to the items so that the background colour changes
+		13. Add a gradient to the background of the whole page
+		
+		
+		***BONUS***
+		Add an aside sidebar to the gallery on the left that contains small thumbnails of "Featured Exhibits" in a 2x4 layout 
+		*/
+
+		.clearfix:after {
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+		}
+		body {
+			background-image: linear-gradient(to top, rgb(175, 90, 10), rgb(255, 189, 89));
+		}
+		.wrapper {
+			margin: 0 auto;
+			max-width: 1280px;
+		}
+
+		header {
+			border-bottom: 2px solid black;
+		}
+		h1 {
+			font-family: 'Pacifico', cursive;
+		}
+		h3 {
+			font-family: 'Indie Flower', cursive;
+			margin: 5px 0px;
+		}
+		img {
+			max-width: 100%;
+		}
+		.item {
+			width: 300px;
+			text-align: center;
+			float: left;
+			max-height: 199px;
+			margin: 10px;
+			padding: 5px;
+			margin-bottom: 20px;
+			border: solid 1px gray;
+			background: lightblue;
+			box-shadow: 10px 5px 5px black;
+		}
+		.item:hover {
+			background-color: crimson;
+		}
+		footer {
+			clear:both;
+		}
+		footer p {
+			text-align: right;
+		}
+		.gallery {
+			float: left;
+			width: 70%;
+		}
+		.featured {
+			float: left;
+			width: 30%;
+			margin:0;
+		}
+		.featureHorse {
+			width:48%;
+			margin: 1% 1%;
+			float:left;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>Horse Gallery</h1>
+		</header>
+		<div class="clearfix">
+			<aside class="featured cleafix">
+				<h2>Featured Horses</h2>
+				<div class="featureHorse">
+					<img src="images/bay-horse.jpg" alt ="">
+				</div>
+				<div class="featureHorse">
+					<img src="images/bay-horse.jpg" alt ="">
+				</div>
+				<div class="featureHorse">
+					<img src="images/bay-horse.jpg" alt ="">
+				</div>
+				<div class="featureHorse">
+					<img src="images/bay-horse.jpg" alt ="">
+				</div>
+				<div class="featureHorse">
+					<img src="images/bay-horse.jpg" alt ="">
+				</div>
+				<div class="featureHorse">
+					<img src="images/bay-horse.jpg" alt ="">
+				</div>
+			</aside>
+			<section class="gallery clearfix">
+
+				<h2>Gallery</h2>
+
+				<div class="item">
+					<img src="images/bay-horse.jpg" alt="">
+					<h3>Bay Horse</h3>
+				</div>
+
+				<div class="item">
+					<img src="images/chestnut-with-blaze.jpg" alt="">
+					<h3>Chestnut with blaze</h3>
+				</div>
+
+				<div class="item">
+					<img src="images/cowboy.jpg" alt="">
+					<h3>Cowboy</h3>
+				</div>
+
+				<div class="item">
+					<img src="images/farrier-with-rasp.jpg" alt="">
+					<h3>Farrier with rasp</h3>
+				</div>
+
+				<div class="item">
+					<img src="images/herd-of-horses.jpg" alt="">
+					<h3>Herd of horses</h3>
+				</div>
+
+				<div class="item">
+					<img src="images/horses-in-field.jpg" alt="">
+					<h3>Horses in field</h3>
+				</div>
+
+			</section>
+		</div>
+		<footer>
+			<p><a href="https://hackeryou.com" target="_blank">All horse images are from unsplash.com</a></p>
+		</footer>
+
+	</div>
+
+</body>
+</html>

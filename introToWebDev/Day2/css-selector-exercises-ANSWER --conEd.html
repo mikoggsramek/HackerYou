@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Exercise Answer</title>
+	<style>
+		/* Start off by selecting the body tag */
+		body {
+			background:#F0BDC5;
+			color: #363636;
+			font-family: arial;
+		}
+
+		/* Select the h1 tag */
+		h1 {
+			color: #daa010;
+			font-size: 50px;
+			margin: 0;
+			text-align: center;
+		}
+
+		/* Select all h2 tags (there are three of them) */
+		h2	{
+			background: #5b5a59;
+			padding: 10px;
+			color: white;
+			text-align: center;
+		}
+
+		/* Select all h3 tags */
+		h3 {
+			font-style: italic;
+		}
+
+		/* Select all the h4 tags */
+		h4 {
+			color: #6298af;
+		}
+
+		/* Select all paragraph tags */
+		p {
+			line-height: 30px;
+		}
+
+		/* Select all the anchor tags */
+		a {
+			color: #daa010;
+		}
+
+		/* Select all the anchor tags when they are hovered, as well as when they are focused */
+		a:hover,
+		a:focus {
+			color: white;
+			background: #daa010;
+		}
+
+		/* Select the element with a class of wrapper */
+		.wrapper {
+			padding: 50px;
+			margin: 50px;
+			width: 650px;
+			background: white;
+		}
+
+		/* Select the section with a class of description */
+		.description {
+			background: #d2ebf7;
+			padding: 20px;
+		}
+
+		/* Select the image within the previous question's description section */
+		.description img {
+			border: 5px solid white;
+			max-width: calc(100% - 10px);
+		}
+
+		/* Select all the images of the banana dishes */
+		.dishes img {
+			margin-right: 12px;
+		}
+
+		/* Select the last image in the section with a class of dishes, and take off the right margin (there are at least two different ways to do this) */
+		.dishes img:last-of-type {
+			margin-right: 0;
+		}
+
+		/* Select all the blockquote elements */
+		blockquote {
+			font-size: 16px;
+			border-left: 1px solid #daa010;
+			padding-left: 10px;
+		}
+
+		/* Select all cite elements inside of the divs with a class of testimonial */
+		.testimonial cite {
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 16px;
+		}
+
+		/* Select the h4 inside the first div with a class of testimonial.*/
+		.tests .testimonial:first-child h4 {
+			font-size: 20px;
+			color: darkslateblue;
+		}
+
+		/* Select the second div with a class of testimonial. */
+		.tests .testimonial:nth-child(2) {
+			margin: 60px 0;
+		}
+
+		/* Bonus: Add a new section underneath 'testimonials' section and give it a class of 'thanks' put an h2 inside. Select that h2. */
+		.thanks h2 {
+			background: #daa010;
+			margin-top: 50px;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+		<!-- headings -->
+		<h1>Banana Bananza</h1>
+		<h2>Vitamin C rich, potassium filled deliciousness.</h2>
+
+		<!-- description -->
+		<section class="description">
+			<h3>What about apples? Bananas is where it's at..</h3>
+			<img src="https://hychalknotes.s3.amazonaws.com/Webp.net-resizeimage-4.jpg" alt="Banana on a pink backdrop.">
+			<p><strong>Bananas</strong> : moon shaped botanical fruit, but guess what, it's also a <em>berry</em>! In some countries Bananas made for cooking are called plantains. To distinguish from dessert Bananas.</p>
+			<p>Founded by a monkey somewhere eating these delicious fruits of the world, they are slightly radioactive, because they contain potassium. Still safe to eat, still safe to be around!  <strong>That's <a href="https://en.wikipedia.org/wiki/Banana" target="_blank">Bananas</a>.</strong></p>
+		</section><!-- end of description -->
+
+		<!-- dishes -->
+		<section class="dishes">
+			<h2>Banana Dishes</h2>
+			<img src="https://hychalknotes.s3.amazonaws.com/Webp.net-resizeimage-1.jpg" alt="Dried fruits dipped in chocolate.">
+			<img src="https://hychalknotes.s3.amazonaws.com/Webp.net-resizeimage-2.jpg" alt="Bright yellow banana smoothie with a chocolate palm tree inside.">
+			<img src="https://hychalknotes.s3.amazonaws.com/Webp.net-resizeimage-3.jpg" alt="Banana and strawberry parfait on a wooden tray.">
+			<img src="https://hychalknotes.s3.amazonaws.com/Webp.net-resizeimage.jpg" alt="Strawberry and banana pancakes stacked with whipcream, topped with a flower.">
+			<p>You love them! Bananas can be eaten in so many different ways! Get creative!</p>
+		</section><!-- end of dishes -->
+
+		<!-- testimonials -->
+		<section class="testimonials">
+			<h2>Testimonials</h2>
+			<!-- tests -->
+			<div class="tests">
+				<!-- testimonial -->
+				<div class="testimonial">
+					<h4>What People Say About Us: </h4>
+					<blockquote>
+						<p>"One time I had an <a href="https://en.wikipedia.org/wiki/Avocado">Avocado</a>, and I also had a Banana, and I put them near each other. I thought my Avocado would ripen 2 to 3 days later, but the next day, my Avocado was ripe! My Banana sped up the rippening process of my Avocado!"</p>
+					</blockquote>
+					<cite class="author">Mariam Syed</cite>
+				</div><!-- end of testimonial 1 -->
+				<!-- testimonial -->
+				<div class="testimonial">
+					<h4>Past Banana Bananza Employee: </h4>
+					<blockquote>
+						<p>"Oh yeah we get those <a href="https://en.wikipedia.org/wiki/Avocado">Avocados</a> all the time. It's too difficult to not love bananas with them they make a great smoothie you know?"</p>
+					</blockquote>
+					<cite class="author">Reyna Dimara</cite>
+				</div><!-- end of testimonial 2 -->
+				<!-- testimonial -->
+				<div class="testimonial">
+					<h4>Past Banana Bananaza Customer: </h4>
+					<blockquote>
+						<p>"Honestly they are super sweet, and I put them in everything I eat to add some sugar in there you know? Smoothies, oatmeal, rice, pasta, bread, anywhere you want just throw them in for some delicious good times."</p>
+					</blockquote>
+					<cite class="author">Shoo Huang</cite>
+				</div><!-- end of testimonial 3 -->
+			</div><!-- end of tests -->
+		</section><!--end of testimonials-->
+
+		<!-- bonus exercise: thanks -->
+		<section class="thanks">
+			<h2>Thank you for visiting Banana Bananaza</h2>
+		</section><!-- end of thanks -->
+
+	</div><!--end of wrapper-->
+</body>
+</html>

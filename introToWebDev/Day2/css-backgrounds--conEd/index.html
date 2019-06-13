@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Backgrounds</title>
+    <style>
+        /***** default styles *****/
+        body {
+            color: white;
+        }
+
+        h2 {
+            font-size: 60px;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 36px;
+            font-weight: lighter;
+            text-transform: lowercase;
+        }
+
+        section {
+            padding: 200px 0 200px 100px;
+            margin-bottom: 150px;
+        }
+        /***** default styles end *****/
+
+        /* EXERCISE START */
+        /*
+        1. Add a background color of #faa142 to the section  with a class of color.
+        */
+        .color {
+            background-color: #faa142;
+        }
+
+        /*
+        1. Add a background image of carrot.jpg found in the assets folder.
+        2. Make the background-size cover as well as entire width of the section.
+         */
+        .cover {
+            background-image: url(assets/carrot.jpg);
+            background-size: cover;
+        }
+
+        /*
+        1. Add a background image of blue-dots.png found in the assets folder.
+        2. Change the background-repeat to only repeat vertically.
+        3. Add a background color of rgb(105, 186, 218).
+        4. Change the background position so the background is on the right side of the element.
+        *****
+        Refactor and write the above using the background shorthand.
+        *****
+         */
+        .repeat {
+            /*background-image: url(assets/blue-dots.png);
+            background-repeat: repeat-y;
+            background-color: rgb(105,186,218);
+            background-position: right;*/
+            background: 
+                rgb(105,186,218) 
+                url(assets/blue-dots.png) 
+                repeat-y 
+                right;
+        }
+
+        /*
+        1. Add a background image of beach.jpg in assets.
+        2. Make the background size cover the the entire width of the section.
+        3. Make the background stay in place as the user scrolls.
+         */
+        .fixed {
+            background-image: url(assets/beach.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /*
+        1. Add a background of a linear gradient going 90 deg using these colors:
+            - rgb(135, 221, 224) at 0% of the gradient
+            - rgb(238, 203, 121) until 80% of the gradient
+            - rgb(236, 180, 95) until 100% of the gradient
+        */
+        .gradient {
+            background: linear-gradient(to right, rgb(135,221,224), rgb(238,203,121) 80%, rgb(236,180,95));
+        }
+
+        /* CHALLENGE */
+        /*
+        1. Add a background image of business.jpg in assets.
+        2. Make the background size cover the the entire width of the section.
+        3. Revisit the background-image property, add a linear-gradient going to top right with the following colors:
+            - rgba(61, 81, 211, 0.6)
+            - rgba(243, 103, 224, 0.6)
+        *****
+        HINT: It is possible to have a linear-gradient and an image on a single background-image! Do a google search on the background-image property to discover how.
+        *****
+        */
+        .gradient-image {
+            background-image: linear-gradient(to top right, rgba(61,81,211,0.5), rgba(243,103,224,0.5)), url(assets/business.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- background color -->
+    <section class="color">
+        <h2>Creatives</h2>
+        <h3>Create things together</h3>
+    </section>
+
+    <!-- background image cover -->
+    <section class="cover">
+        <h2>Carrots</h2>
+        <h3>I don't carrot-all</h3>
+    </section>
+
+    <!-- background image repeat -->
+    <section class="repeat">
+        <h2>Doting Dots</h2>
+        <h3>being nice to dots is nice</h3>
+    </section>
+
+    <!-- background image fixed -->
+    <section class="fixed">
+        <h2>Beaches & Shores</h2>
+        <h3>surf's up</h3>
+    </section>
+
+    <!-- background gradient -->
+    <section class="gradient">
+        <h2>Crypto</h2>
+        <h3>Cryptic messages, decoded </h3>
+    </section>
+
+    <!-- CHALLENGE -->
+    <!-- background image with linear gradient -->
+    <section class="gradient-image">
+        <h2>Business</h2>
+        <h3>Buzzwords, disrupt, blockchain</h3>
+    </section>
+
+</body>
+
+</html>

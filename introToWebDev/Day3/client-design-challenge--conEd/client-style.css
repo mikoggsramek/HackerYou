@@ -1,0 +1,44 @@
+/* All of your styles go in here - you don't need to use <style> in this file since that is an HTML element (doesn't belong in CSS) */
+
+html {
+    margin:0;
+    font-size: 62.5%;
+}
+body {
+    margin: 0px;
+}
+main {
+    background-image: url(assets/backround.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+main section {
+    background-image: url(assets/flowers.jpg);
+    background-size: cover;
+
+    /* height: 20px; */
+    width: 400px;
+    padding: 50px;
+    margin: 0 auto;
+
+    border-radius: 250px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+h1 {
+    font-style: italic;
+    font-size: 5em;
+    margin:0 auto;
+    font-family: 'Crimson Text', serif;
+}
+h2 {
+    margin: 0px auto;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.5em;
+}
+
+main div {
+    padding: 200px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>CSS Border Radius</title>
+		<style type="text/css">
+			body {
+				margin: 0; /* Just overriding the browser default to zero */
+			}
+			.box {
+				width:200px;
+				height:200px;
+				margin:5px;
+			}
+			.box1 {
+				background:red;
+				border-radius:5px;
+			}
+			.box2 {
+				background:green;
+				border-radius:50%;
+			}
+			.box3 {
+				background:blue;
+				border-radius:5px 10px 100px 1px;
+			}
+			.box4 {
+				background:orange;
+				border-radius:5% 100% 10px 100%;
+			}
+			img.dog {
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box box1"></div>
+		<div class="box box2"></div>
+		<div class="box box3"></div>
+		<div class="box box4"></div>
+		<img src="http://cl.ly/image/1v2U251k1f3N/dog.jpg" alt="" class="dog">
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Structural Elements</title>
+	<!-- 
+		This exercise will focus on creating a gallery layout using floats, the box model, and widths. If you need a review, check out the Layout class.
+	 -->
+	<style>
+	/*
+		Exercise:
+		1. Add a padding of 10px to .item (notice how the margin from the child elements is no longer affecting the parent?)
+		2. Add a border-bottom of 10px solid #616161 to .item
+		3. Use the nth-child even selector to change the background-color to have a transparency of 0.5
+		4. Give all .item a width of 50%
+		5. Add a float to all of the elements with a class of "item"
+		6. Why don't they go side-by-side? Try setting box-sizing: border-box
+		7. Now change the width of .item to 25%
+		8. Add another div with the class of .wild-one
+		9. Move the wild-one div to various places - how does it behave? What if we add a float:left to it?
+	*/
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+
+		.wrapper {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.item {
+			background-color: rgb(62, 141, 180);
+			text-align: center;
+			padding: 10px;
+			border-bottom: 10px solid #616161;
+			width: 25%;
+			float: left;
+			box-sizing: border-box;
+		}
+		.item:nth-child(2n){
+			background-color: rgba(62, 141, 180, 0.5);
+		}
+		.wild-one {
+			background-color: tomato;
+			text-align: center;
+			border-bottom: 10px solid black;
+			padding: 10px;
+			width: 25%;
+			box-sizing: border-box;
+			float: left;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+
+		<h1>Structural Element Layout</h1>
+
+		<section class="items">
+			<div class="item">
+				<h2>Heading 1</h2>
+				<p>Some content goes here.</p>
+			</div>
+
+			<div class="item">
+				<h2>Heading 2</h2>
+				<p>Some content goes here.</p>
+			</div>
+
+			<div class="wild-one">
+				<h2>Wild Card</h2>
+				<p>Some wild goes here.</p>
+			</div>
+
+			<div class="item">
+				<h2>Heading 3</h2>
+				<p>Some content goes here.</p>
+			</div>
+
+			<div class="item">
+				<h2>Heading 4</h2>
+				<p>Some content goes here.</p>
+			</div>
+
+			<div class="item">
+				<h2>Heading 5</h2>
+				<p>Some content goes here.</p>
+			</div>
+
+			<div class="item">
+				<h2>Heading 6</h2>
+				<p>Some content goes here.</p>
+			</div>
+
+			<div class="item">
+				<h2>Heading 7</h2>
+				<p>Some content goes here.</p>
+			</div>
+
+			<div class="item">
+				<h2>Heading 8</h2>
+				<p>Some content goes here.</p>
+			</div>
+
+			
+			
+		</section>
+
+	</div>
+
+</body>
+</html>

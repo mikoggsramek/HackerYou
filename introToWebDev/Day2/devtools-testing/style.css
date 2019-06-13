@@ -1,0 +1,85 @@
+
+/* Start off by setting the base styles on the body tag */
+
+body {
+	background: red;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+/* Let's change the color and size of our h1 tag */
+h1 {
+	color: red;
+	font-size: 50px;
+}
+
+/* Select all h2 tags and add a little style (there are three of them) */
+h2  {
+	font-size: 20px;
+}
+
+/* Select all h3 tags and make them italic */
+h3 {
+	font-style: italic;
+}
+
+/* Select all paragraph tags and set the line height to 30px */
+p {
+	line-height: 30px;
+}
+
+/* Change all links to red */
+a {
+	color: red;
+}
+/* Change all links white with a red background when they are hovered */
+a:hover {
+	color: white;
+	background-color: red;
+}
+
+/* Find the div with a class of wrapper and write a selector for it */
+.wrapper {
+	background: white;
+	width: 800px;
+	margin: 50px auto;
+	padding: 50px;
+}
+
+/* Select the div with a class of description and add a blue background and a little padding */
+.description {
+	background: black;
+	padding: 20px;
+	color: white;
+}
+
+/* Select the image within the previous question's description div */
+.description img {
+	border: 2px solid grey;
+}
+
+
+/* Select all the blockquotes, make the font smaller and add a border */
+
+blockquote {
+	font-size: 14px;
+}
+
+/* select the author spans within the quote div and bold them */
+.quote span {
+	font-weight: bold;
+}
+
+
+/* Select all the images of the team members */
+.team img {
+	padding: 20px;
+	border: 2px solid black;
+}
+
+/* Select the last image and take off the right margin (there are at least two different ways to do this) */
+.team img:last-child {
+	margin-right: 0;
+}
+
+/* Bonus: Add a new div underneath 'Our Team' called Bonus exercise and style the h2 tag to have a red background */

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Two Column Layout</title>
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+	<!-- 
+		This exercise will focus on creating a two column layout using floats, the box model, and widths. If you need a review, check out the Layout class.
+	 -->
+	<style>
+
+	/*
+		Exercise:
+		1. Add a width of 60% to the section
+		2. Add a width of 40% to the aside
+		3. Make h1 and image side-by-side without using float
+		4. Float section to the left
+		5. Float aside to the left
+		6. Clear footer using clear:both to reset the float
+
+		** BONUS **
+		7. Add a subheading below the h1. What happens? How can you fix this?
+			- The subheading tries to float. We can fix this by using clear: both! 
+		8. Why doesn't the aside go all the way down if we have less content in it?
+			- The aside is only as big as the content. 
+	*/
+
+		* {
+			box-sizing: border-box;
+		}
+
+		 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } 
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+
+		.wrapper {
+			max-width: 1040px;
+			margin: 25px auto;
+			background: rgb(195, 225, 243);
+		}
+
+		header, section, aside, footer {
+			padding: 10px;
+		}
+
+		header {
+			text-align: left;
+			background: linear-gradient(to top, #DE6262 , #FFB88C);
+		}
+		section img, aside img{
+			width: 100%;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Cormorant SC', serif;
+		}
+
+		section {
+			border: 1px solid grey;
+			background: rgba(177, 232, 255, 0.67);
+			/*1. Add a width of 60% to the section*/
+			width: 60%;
+			/*4. Float section to the left*/
+			float: left;
+		}
+
+		aside {
+			background: rgb(140, 199, 240);
+			/*2. Add a width of 40% to the aside*/
+			width: 40%;
+			/*5. Float aside to the left*/
+			float: left;
+		}
+
+		footer {
+			background: rgb(107, 128, 189);
+			/*6. Clear footer using clear:both to reset the float*/
+			clear: both;
+		}
+
+		/*3. Make h1 and image side-by-side*/
+		header img {
+			float: left;
+		}
+		header h1 {
+			float: left;
+			margin-left: 30px;
+		}
+		header h2 {
+			clear: both;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<div class="wrapper">
+		<header class="clearfix">
+			<img src="images/business-logo.png" alt="Business Logo" class="logo">
+			<h1>Important Business Incorporated</h1>
+			<h2>Some other important info here</h2>
+		</header>
+		<section>
+			<img src="images/newspaper.jpg" alt="Business Newspaper">
+			<h2>Mission Statement</h2>
+
+			<p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+
+			<p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+
+			<p>Capitalise on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+		</section>
+		<aside>
+			<ul>
+				<li><a href="http://forbes.com">Business News</a></li>
+				<li><a href="https://en.wikipedia.org/wiki/Suit_(clothing)">What is a suit?</li>
+				<li><a href="http://afunnyweb.com/wp-content/uploads/funny-business-cat-meme-box.jpg">Business Cat</a></li>
+			</ul>
+			<img src="images/important-client.jpg" alt="Important Client">
+		</aside>
+		<footer>
+			<p>All jargon generated from http://www.cipsum.com/</p>
+		</footer>
+	</div>
+
+</body>
+</html>
