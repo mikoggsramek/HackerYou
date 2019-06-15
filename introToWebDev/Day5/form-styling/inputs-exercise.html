@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>CSS Input styling</title>
+	<style type="text/css">
+		/*
+			Using CSS and by adding HTML to the above, match the styles of the answer key
+			Pay attention to:
+				- font sizes
+				- borders
+				- focus states
+				- padding
+				- margin
+				- placeholder text vs set values
+				- password
+		*/
+
+		body {
+			background:black;
+			background-size: cover;
+			font-family: sans-serif;
+		}
+
+		form.exercise {
+			max-width:500px;
+			padding:10px;
+			margin:20px auto;
+			background:white;
+			border-radius: 5px;
+		}
+
+		/* Some default styling */
+		input {
+			width:100%;
+			margin:0  0 20px 0;
+			outline:0;
+		}
+			input[type=checkbox],input[type=radio] {
+				width:auto;
+			}
+	</style>
+</head>
+<body>
+	<form action="login.php" class="exercise">
+
+		<!-- Match the style and placeholder text -->
+		<input type="text" class="ex1">
+
+		<!-- Match the style -->
+		<input type="text" class="ex2">
+
+		<!-- Match the style - pay attention to normal, hover and focus states -->
+		<input type="text" class="ex3">
+
+		<!-- Ignore the onchange attribute. I've used a little javascript to show us the value in the span below -->
+		<!-- Increase by 50 and pay attention to the max and min values of the example -->
+		<input class="ex4" type="range" value="50" onchange="document.querySelector('.rangeValue').innerHTML = this.value">
+		<span class="rangeValue">50</span>
+
+		<!-- Match the style of these grouped elements -->
+		<div class="name">
+			<input type="text" class="ex5">
+			<input type="text" class="ex6">
+			<input type="text" class="ex7">
+		</div>
+
+		<!-- Use positioning to match the style of these inputs
+			pay attention to what happens when you type something longer than the input box allows
+		 -->
+		<div class="username">
+			<input type="text" class="ex8" placeholder="Enter desired username">
+			<input type="submit" class="check" value="Check Availability">
+		</div>
+
+		<!-- Use positioning to place the labels like the answer key -->
+		<div class="labelGroup">
+			<div class="inputWrap">
+				<label for="ex9-1">Mother's Maiden Name</label>
+				<input type="text" name="ex9-1">
+			</div>
+			<div class="inputWrap">
+				<label for="ex9-2">Father's Birth City</label>
+				<input type="text" name="ex9-2">
+			</div>
+			<div class="inputWrap">
+				<label for="ex9-3">Dog's favourite rap album</label>
+				<input type="text" name="ex9-3">
+			</div>
+		</div>
+
+		<!-- Create a label for the following input and change it to a password input -->
+		<input type="text" name="password" class="ex10">
+
+		<!-- Make this input have speech capabilities in chrome -->
+		<input type="text">
+
+		<!-- Make this textarea expand when clicked -->
+		<textarea name="bio" class="bio" cols="30" rows="10" placeholder="Write a little bit about you"></textarea>
+
+		<!-- Make mustard and mayo be checked by default -->
+		<label for="mayo">mayo</label><input type="checkbox" name="mayo" value="mayo">
+		<label for="ketchup">ketchup</label><input type="checkbox" name="ketchup" value="ketchup">
+		<label for="mustard">mustard</label><input type="checkbox" name="mustard" value="mustard">
+		<label for="djonaise">djonaise</label><input type="checkbox" name="djonaise" value="djonaise">
+		<label for="ranch">ranch</label><input type="checkbox" name="ranch" value="ranch">
+
+		<!-- I should only be able to select one of the following, fix it -->
+		<div class="gender">
+			Male: <input type="radio" name="male" value="m">
+			Female: <input type="radio" name="female" value="f">
+			Prefer not to say: <input type="radio" name="undisclosed" value="o">
+		</div>
+
+		<!-- Add countries to this select box, make dog the default -->
+		<select name="countries">
+		</select>
+	</form>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

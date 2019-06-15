@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:700,500&display=swap" rel="stylesheet">
 
     <meta name='keywords' content='travel, outdoors, ipsum dolor sit'>
     <meta name='description' content='Book your outdoor travels here.'>
     <meta name='author' content='Miko Sramek via HackerYou'>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700,500&display=swap" rel="stylesheet">
 
     <title>Miko Sramek - Project 1 - Level 3</title>
+
 </head>
 <body>
+    <!-- Skip Link -->
     <a href='#maincontent' class='skip-link'>Skip to main content.</a>
     <!-- Start of the Header -->
     <header>
@@ -24,10 +26,16 @@
             <!-- Nav Bar -->
             <nav>
                 <ul class="clearfix">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="" class="button">Contact</a></li>
+                    <li><a href="#maincontent">Home</a></li>
+                    <li>
+                        <a href="#">About</a>
+                        <ul class="sub-menu">
+                            <li><a href="#featureone">Feature 1</a></li>
+                            <li><a href="#featuretwo">Feature 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="mailto:info@hackeryou.com" class="button">Contact</a></li>
                 </ul>
             </nav> <!-- End of Nav -->
             <h1>travel outdoor <br />ipsum dolor sit.</h1>
@@ -39,7 +47,7 @@
         <!-- Start of Wrapper -->
         <div class="wrapper">
             <!-- Start of First Feature Section -->
-            <section class="clearfix feature">
+            <section id="featureone" class="clearfix feature">
                 <!-- Vertical Image -->
                 <div class="verticalImage">
                     <img src="assets/image-1.jpeg" alt="A blue car driving through winding mountains.">
@@ -61,7 +69,7 @@
             </section>
 
             <!-- Start of Second Feature Section -->
-            <section class="clearfix feature"> 
+            <section id="featuretwo" class="clearfix feature"> 
                 <!-- Start of Horizontal Section -->
                 <div class = "horizontal">
                     <div class="horizontalImage">
@@ -100,10 +108,10 @@
             <!-- Start of Website Nav -->
             <nav>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav> <!-- End of Website Nav -->
             <!-- Start of Media Links -->
@@ -121,5 +129,6 @@
             <p class="copyright">© 2018 HackerYou</p>
         </div> <!-- End of Wrapper -->
     </footer> <!-- End of Footer -->
+    
 </body>
 </html>

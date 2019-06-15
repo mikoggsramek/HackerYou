@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>CSS Input styling</title>
+
+	<style type="text/css">
+		/*
+			Using CSS and by adding HTML to the above, match the styles of the answer key
+			Pay attention to:
+				- font sizes
+				- borders
+				- focus states
+				- padding
+				- margin
+				- placeholder text vs set values
+				- password
+		*/
+
+		article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+		input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+		.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+		* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+		body {
+			background:black;
+			background-size: cover;
+			font-family: sans-serif;
+		}
+
+		form.exercise {
+			max-width:500px;
+			padding:10px;
+			margin:20px auto;
+			background:white;
+			border-radius: 5px;
+		}
+
+		/* Some default styling */
+		input {
+			width:100%;
+			margin:0  0 20px 0;
+			outline:0;
+		}
+			input[type=checkbox],input[type=radio] {
+				width:auto;
+			}
+
+		input.ex1 {
+			font-size:30px;
+		}
+
+		input.ex2 {
+			background:#bada55;
+			border:0;
+			padding:10px;
+			color:white;
+			font-size:15px;
+		}
+
+		input.ex3 {
+			border:1px solid black;
+			border-radius: 2px;
+			padding:5px;
+		}
+			input.ex3:hover {
+				border:1px solid red;
+			}
+			input.ex3:focus {
+				border:1px solid blue;
+			}
+		.name input {
+			font-size:18px;
+			border:1px solid #ccc;
+			border-radius: 4px;
+			padding:10px;
+			float:left;
+		}
+			.name input.ex5 {
+				width:40%;
+			}
+			.name input.ex6 {
+				width:15%;
+				margin:0 2.5%;
+			}
+			.name input.ex7 {
+				width:40%;
+			}
+			.name input:hover {
+				border-color: #999;
+			}
+			.name input:focus {
+				border-color: #000;
+			}
+
+		.username {
+			position: relative;
+			clear:both;
+		}
+			input.ex8 {
+				padding:10px 155px 10px 10px;
+				font-size:20px;
+				border:1px solid #e6634d;
+			}
+				input.ex8:focus {
+					border-color:#37b7b5;
+				}
+
+			input.check {
+				width:auto;
+				position: absolute;
+				top:10px;
+				right:10px;
+				border:0;
+				background:#e6634d;
+				color:#fff;
+				font-size:15px;
+				border-radius: 3px;
+				text-shadow:1px 1px 0 #C24F3C;
+			}
+				input.check:hover {
+					background:#4de6e4;
+					text-shadow:1px 1px 0 #37b7b5;
+					cursor: pointer;
+				}
+
+
+		.labelGroup input {
+			padding:10px;
+			border:1px solid #ccc;
+		}
+			.inputWrap {
+				position: relative;
+			}
+			.inputWrap label {
+				position: absolute;
+				top:0;
+				right:0;
+				background:#f1c11a;
+				color:#fff;
+				text-shadow:1px 1px 0 #cca20f;
+				padding:2px 5px;
+			}
+
+		textarea.bio {
+			width:100%;
+			height:20px;
+		}
+			textarea.bio:focus {
+				height:200px;
+			}
+
+	</style>
+</head>
+<body>
+	<form action="login.php" class="exercise">
+
+		<!-- Match the style -->
+		<input type="text" class="ex1" placeholder="Welcome to the input exercise">
+
+		<!-- Match the style -->
+		<input type="text" class="ex2">
+
+		<!-- Match the style - pay attention to normal, hover and focus states -->
+		<input type="text" class="ex3" placeholder="style my default, hover and focus states">
+
+		<!-- Ignore the onchange attribute. I've used a little javascript to show us the value in the span below -->
+		<!-- Increase by 50 and pay attention to the max and min values of the example -->
+		<input type="range" class="ex4" min="50" max="500" step="50" value="50" onchange="document.querySelector('.rangeValue').innerHTML = this.value">
+		<span class="rangeValue">50</span>
+
+		<!-- Match the style of these grouped elements -->
+		<div class="name">
+			<input type="text" class="ex5" placeholder="First Name">
+			<input type="text" class="ex6" placeholder="I">
+			<input type="text" class="ex7" placeholder="Last Name">
+		</div>
+
+		<!-- Use positioning to match the style of these inputs
+			pay attention to what happens when you type something longer than the input box allows
+		 -->
+		<div class="username">
+			<input type="text" class="ex8" placeholder="Enter desired username">
+			<input type="submit" class="check" value="Check Availability">
+		</div>
+
+		<!-- Use positioning to place the labels like the answer key -->
+		<div class="labelGroup">
+			<div class="inputWrap">
+				<label for="ex9-1">Mother's Maiden Name</label>
+				<input type="text" name="ex9-1">
+			</div>
+			<div class="inputWrap">
+				<label for="ex9-2">Father's Birth City</label>
+				<input type="text" name="ex9-2">
+			</div>
+			<div class="inputWrap">
+				<label for="ex9-3">Dog's favourite rap album</label>
+				<input type="text" name="ex9-3">
+			</div>
+		</div>
+
+		<!-- Create a label for the following input and change it to a password input -->
+		<label for="password">Password</label>
+		<input type="password" name="password" class="ex10">
+
+		<!-- Make this input have speech capabilities in chrome -->
+		<input type="text" x-webkit-speech>
+
+		<!-- Make this textarea expand when clicked -->
+		<textarea name="bio" class="bio" cols="30" rows="10" placeholder="Write a little bit about you"></textarea>
+
+		<!-- Make mustard and mayo be checked by default -->
+		<label for="mayo">mayo</label><input type="checkbox" name="mayo" id="mayo" value="mayo" checked>
+		<label for="ketchup">ketchup</label><input type="checkbox" name="ketchup" id="ketchup" value="ketchup">
+		<label for="mustard">mustard</label><input type="checkbox" name="mustard" id="mustard" value="mustard" checked>
+		<label for="djonaise">djonaise</label><input type="checkbox" name="djonaise" id="djonaise" value="djonaise">
+		<label for="ranch">ranch</label><input type="checkbox" name="ranch" id="ranch" value="ranch">
+
+		<!-- I should only be able to select one of the following, fix it -->
+		<div class="gender">
+			Male: <input type="radio" name="gender" value="m">
+			Female: <input type="radio" name="gender" value="f">
+			Prefer not to say: <input type="radio" name="gender" value="o">
+		</div>
+
+		<!-- Add five animals to this select box, make dog the default -->
+		<select name="countries">
+			<option value="cat">Cat</option>
+			<option value="dog" selected>Dog</option>
+			<option value="bird">Bird</option>
+			<option value="horse">Horse</option>
+			<option value="snake">Snake</option>
+		</select>
+
+
+	</form>
+
+</body>
+</html>
