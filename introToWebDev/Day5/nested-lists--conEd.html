@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS List Styles</title>
+	<style>
+		/* This exercise will help us learn nested Lists. If you need help check out the Lists and Navigation class. */
+
+		/* 1. Make the first nested ordered list list-style-type of decimal-leading-zero*/
+		/* 2. Adjust the padding of the ordered list nested under list item "Canada Pros" so it's not indented too far right.*/
+		/* 3. Make the background of the main unordered list blue, and make the text white.*/
+		/* 4. Make the background of the sub-lists (nested in the main unordered list) red*/
+
+		.wrapper {
+			margin:20px auto;
+			max-width:500px;
+		}
+		ol li:first-of-type li {
+			list-style: decimal-leading-zero;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<div class="wrapper">
+			<ol>
+				<li>Canada Pros
+					<ol>
+						<li>Snow</li>
+						<li>Maple Syrup</li>
+						<li>Moose</li>
+					</ol>
+				</li>
+				<li>Canada Cons
+					<ol>
+						<li>Snow</li>
+						<li>Mosquitos</li>
+						<li>Too nice</li>
+					</ol>
+				</li>
+				<li>Canada Facts
+					<ul>
+						<li>Canada's lowest recorded temperature was -63 degrees Celsius in 1947.</li>
+						<li>Canada has more lakes than the rest of the world's lakes combined.</li>
+						<li>Canada has the largest coastline in the world.</li>
+						<li>With 1,896 km, Yonge Street is the longest street in the world.</li>
+					</ul>
+				</li>
+			</ol>
+
+			<ul>
+				<li>Services
+					<ol>
+						<li>Design</li>
+						<li>Web Development</li>
+						<li>Marketing</li>
+					</ol>
+				</li>
+				<li>About Us
+					<ul>
+						<li>Our Story</li>
+						<li>Team members</li>
+						<li>Careers</li>
+					</ul>
+				</li>
+				<li>Contact</li>
+			</ul>
+		</div>
+	</main>
+</body>
+</html>

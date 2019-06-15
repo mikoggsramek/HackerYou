@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>ex3 SOLUTION</title>
+		<style type="text/css">
+			body {
+				margin: 0; /* Just overriding the browser default to zero */
+			}
+			/*
+				Using both relative and absolute positioning, replicate the answer's positioning.
+				Note that if you resize the screen the elements should move with the wrapper and always line up with the edges of the green
+			*/
+
+			.wrapper {
+				width:70%;
+				border:2px solid black;
+				position: relative;
+				margin:20px auto;
+				padding:20px;
+			}
+
+			.innerWrapper {
+				margin:80px;
+				height:400px;
+				background:#BADA55;
+			}
+
+			.box {
+				width:100px;
+				height:100px;
+				position: absolute;
+			}
+
+			.box1 {
+				background:red;
+				top:0;
+				left:0;
+			}
+			.box2 {
+				background:green;
+				top:0;
+				right:0;
+			}
+			.box3 {
+				background:blue;
+				bottom:0;
+				right:0;
+			}
+			.box4 {
+				background:orange;
+				bottom:0;
+				left:0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="innerWrapper">
+				<div class="box box1"></div>
+				<div class="box box2"></div>
+				<div class="box box3"></div>
+				<div class="box box4"></div>
+			</div>
+		</div>
+	</body>
+</html>

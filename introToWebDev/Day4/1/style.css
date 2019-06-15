@@ -8,6 +8,9 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+.skip-link { position:absolute;left:-1000px;top:5px;z-index:999;background:white;color:black; }
+
+.skip-link:focus { left: 0; }
 
 /*Colours
 Dark Blue: #005769
@@ -45,7 +48,7 @@ img {
 header {
     background-image: url(assets/image-main.jpeg);
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 
     padding: 50px 68px;
     padding-bottom: 80px;

@@ -8,6 +8,9 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+.skip-link { position:absolute;left:-1000px;top:5px;z-index:999;background:white;color:black; }
+
+.skip-link:focus { left: 0; }
 
 /*Colours
 Dark Blue: #005769
@@ -19,12 +22,15 @@ Light Grey: #F6F8FA
 html {
     font-family: "Raleway";
     font-weight: 700;
+    /* filter: grayscale(1); */
+    
     /* filter: blur(8px); */
 }
 .wrapper {
     max-width: 1140px;
     width: 90%;
     margin: 0 auto;
+    /* filter: blur(0.45px); */
     /* border: red solid; */
 }
 a, a:visited {
@@ -102,14 +108,14 @@ h3 {
 }
 .verticalImage {
     float: left;
-    width: calc(32% - 20px);
-    margin: 0 10px;
+    width: calc((100%/3) - 20px);
+    margin: 10px 10px;
 }
 
 .horizontal {
     float: left;
-    width: calc(68% - 20px);
-    margin: 0 10px 10px 10px;
+    width: calc((100% / 3 * 2) - 20px);
+    margin: 10px 10px 10px 10px;
 }
 
 .horizontalImage {
@@ -119,7 +125,7 @@ h3 {
 .text {
     text-align: center;
     width: 100%;
-    margin-bottom: 1%;
+    /* margin-bottom: 1%; */
     padding: 40px 60px;
     background-color: #F6F8FA;
     /* height: 280px; */
@@ -133,13 +139,20 @@ h3 {
     text-transform: uppercase;
     padding: 10px 25px;
     background-color: #16D6D1;
-    border-radius: 5%;
+    border-radius: 5px;
 }
-
-.imageText {
+.button:hover
+{
+    background-color:#005769;
+    color: white;
+}
+a:focus.button {
+    background-color:#005769;
+    color: white;
+    border: 2px dotted #16D6D1;
+}
+/* .imageText {
     background-image: linear-gradient(to top, rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(assets/image-5.jpeg);
-    /* background-color: rgb(255, 255, 255); */
-    /* opacity: 0.5; */
     background-size: cover;
     text-align: center;
 }
@@ -158,6 +171,12 @@ h3 {
     float: left;
     width: calc(50% - 20px);
     margin: 0 10px;
+} */
+
+.thirdImage {
+    float: left;
+    width: calc((100% / 3) - 20px);
+    margin: 10px 10px;
 }
 
 
@@ -223,9 +242,13 @@ footer .wrapper {
     padding: 0 10px;
 }
 
-.wrapper .feature:nth-child(2) .buttonWrapper {
-    padding: 7px 0;
-}
+
+/* First Read More */
 .wrapper .feature:first-child .buttonWrapper {
-    padding: 6.5px 0;
+    padding: 22px 0;
+}
+
+/* Second Read More */
+.wrapper .feature:nth-child(2) .buttonWrapper {
+    padding: 23px 0;
 }

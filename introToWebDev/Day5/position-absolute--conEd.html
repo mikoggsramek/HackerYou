@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<meta charset="UTF-8">
+	<head>
+		<title>CSS Position</title>
+		<style type="text/css">
+			body {
+				margin: 0; /* Just overriding the browser default to zero */
+			}
+			.box {
+				width: 100px;
+				height: 100px;
+			}
+			.yellowBox {
+				/*semi transparent orange*/
+				background: rgba(255, 165, 0, 0.7);
+				/* background: rgb(255, 165, 0); */
+				position: absolute;
+				top: 20px;
+				/* bottom: 20px; */
+				left: 20px;
+				/* right: 20px; */
+				/* z-index: -1; */
+			}
+
+			.blueBox {
+				/*semi transparent blue*/
+				background: rgba(65, 105, 255, 0.7);
+				position: absolute;
+				top: calc(50% - 50px);
+				left: calc(50% - 50px);
+				/*background: rgb(65, 105, 255);*/
+			}
+
+			.redBox {
+				/*semi transparent red*/
+				background: rgba(255, 0, 0, 0.7);
+				/*background: rgb(255, 0, 0); */
+			}
+
+			.greenBox {
+				/*semi transparent green*/
+				background: rgba(0, 138, 0, 0.7);
+				/* position: absolute;
+				top: 60px;
+				left: 60px; */
+				/*background: rgb(0, 138, 0); */
+			}
+		</style>
+	</head>
+	<body>
+			<div class="box yellowBox"></div>
+
+		<div class="box blueBox"></div>
+		<div class="box redBox"></div>
+		
+		<div class="box greenBox"></div>
+		
+	</body>
+</html>

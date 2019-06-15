@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>ex6 SOLUTION</title>
+		<style type="text/css">
+			body {
+				margin: 0; /* Just overriding the browser default to zero */
+			}
+
+			/* box sizing border box and clearfix */
+			* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+			/* Use absolute and relative positioning to position the rings and then use z-index to match the layering with the answer */
+
+			.wrapper {
+				width: 735px;
+				position: relative;
+				margin: 100px auto 0 auto;
+			}
+
+			.ring {
+				width:200px;
+				height:200px;
+				margin:5px;
+				float:left;
+				position: absolute;
+			}
+			.ring1 {
+				border:15px solid #0085c7;
+				border-radius: 50%;
+				z-index: 5;
+			}
+			.ring2 {
+				border:15px solid #f4c300;
+				border-radius: 50%;
+				top:100px;
+				left:100px;
+				z-index: 1;
+			}
+			.ring3 {
+				border:15px solid #000000;
+				border-radius: 50%;
+				left:250px;
+				top:0;
+				z-index: 3;
+			}
+			.ring4 {
+				border:15px solid #009f3d;
+				border-radius: 50%;
+				top:100px;
+				left:350px;
+				z-index: 4;
+			}
+			.ring5 {
+				border:15px solid #df0024;
+				border-radius: 50%;
+				left:500px;
+				top:0;
+				z-index: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="ring ring1"></div>
+			<div class="ring ring2"></div>
+			<div class="ring ring3"></div>
+			<div class="ring ring4"></div>
+			<div class="ring ring5"></div>
+		</div>
+	</body>
+</html>

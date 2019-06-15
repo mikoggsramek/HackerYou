@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS List Styles</title>
+  <style>
+	/* This exercise will help us learn Lists. If you need help check out the Lists and Navigation class. */
+
+  	/* 1. Change the ordered list to lowercase roman numerals*/
+  	/* 2. Change the unordered list to squares and outside*/
+  	/* 3. Change the unordered first list item to circle and inside*/
+  	/* 4. Change the unordered third list item to have a custom bullet. Use https://hychalknotes.s3.amazonaws.com/yellow-bullet.png*/
+
+    .wrapper {
+      margin: 150px;
+      max-width: 350px;
+    }
+
+    ol, ul {
+      background: lightsalmon;
+      margin: 0 0 20px 0;
+      padding: 0;
+	}
+	ul {
+		list-style: square outside;
+	}
+		ul li:first-child {
+			list-style: circle inside;
+		}
+		ul li:nth-child(3) {
+			list-style-image: url(https://hychalknotes.s3.amazonaws.com/yellow-bullet.png);
+		}
+		
+	ol {
+		list-style-type: lower-roman;
+	}
+  </style>
+</head>
+	<body>
+
+		<div class="wrapper">
+			<ol>
+				<li>One</li>
+				<li>Two</li>
+				<li>Three</li>
+			</ol>
+
+			<ul>
+				<li>Milk</li>
+				<li>Bread</li>
+				<li>Eggs</li>
+				<li>Beer</li>
+				<li>Sketti</li>
+				<li>Sauce</li>
+				<li>Hot Dogs</li>
+			</ul>
+		</div>
+
+	</body>
+</html>

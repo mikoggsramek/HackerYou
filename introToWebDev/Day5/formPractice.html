@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <style>
+        .wrapper {
+            max-width: 1080px;
+            margin:0 auto;
+            /* border: 1px solid red; */
+            /* text-align: center; */
+        }
+        label {
+            display: block;
+            margin-left: 40px;
+        }
+        select,
+        input {
+            margin-left: 50px;
+        }
+        .toppings input,
+        .toppings label,
+        .radio label {
+            display: inline-block;
+            margin-left: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Big Order Form</h1>
+        <h2>Order Inc.</h2>
+        <form action="" method="post">
+            <h3>Account:</h3>
+            <label for="myName">Email:</label>
+            <input type="email" name="name" id="myName" placeholder="username">
+            <label for="myPass">Password:</label>
+            <input type="password" name="name" id="myPass" placeholder="password">
+            
+            <h3>Search:</h3>
+            <label for="searchingFor">Enter your search term:</label>
+            <input type="search" id="searchingFor">
+
+            <h3>General Options:</h3>
+            <!-- Will pop-up a colour selector -->
+            <label for="chooseColour">Choose a colour:</label>
+            <input type="color" id="chooseColour" value="#BADA55">
+
+            <!-- Will pop-up a file submission browser -->
+            <label for="uploadFile">Upload your file:</label>
+            <input type="file" id="uploadFile">
+
+            <h3>Pizza Options:</h3>
+            <!-- Range will take min, max, step, and value -->
+            <label for="levelOfCheesiness">Amount of Cheese</label>
+            <input type="range" id="levelOfCheesiness" min="0" max="11">
+
+            <!-- A select will provice a drop-down menu -->
+            <label for="spice">Spice Level:</label>
+            <select name="levelOfSpiciness" id="spice">
+                <option value="">Please choose an option</option>
+                <option value="noSpice">No Spice </option>
+                <option value="mild">Mild </option>
+                <option value="medium">Medium</option>
+                <option value="spicy">Spicy</option>
+                <option value="deathlySpicy">Death</option>
+            </select>
+            <!-- <select name="levelOfSpiciness" id="spice" multiple>
+                <option value="">Please choose an option</option>
+                <option value="noSpice">No Spice </option>
+                <option value="mild">Mild </option>
+                <option value="medium">Medium</option>
+                <option value="spicy">Spicy</option>
+                <option value="deathlySpicy">Death</option>
+            </select> -->
+            <h4>Toppings:</h4>
+            <div class="toppings">
+                <label for="pepperoni">Pepperoni</label>
+                <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+
+                <label for="olives">Olives</label>
+                <input type="checkbox" id="olives" name="topping" value="olives" checked>
+
+                <label for="hotsauce">Hotsauce</label>
+                <input type="checkbox" id="hotsauce" name="topping" value="hotsauce">
+
+                <label for="mushroom">Mushroom</label>
+                <input type="checkbox" id="mushroom" name="topping" value="mushroom" checked>
+
+                <label for="bacon">Bacon</label>
+                <input type="checkbox" id="bacon" name="topping" value="bacon">
+
+                <label for="sunDriedTomatoes">Sun Dried Tomatoes</label>
+                <input type="checkbox" id="sunDriedTomatoes" name="topping" value="sunDriedTomatoes">
+
+                <label for="pineapple">Pineapple</label>
+                <input type="checkbox" id="pineapple" name="topping" value="pineapple">
+            </div>
+
+            <div class="radio">    
+                <h4>Size:</h4>
+                <input type="radio"
+                name="pizzaSize"
+                value="small" id="small">
+                <label for="small">Small</label>
+                
+                <input type="radio" name="pizzaSize" 
+                value="medium" id="medium">
+                <label for="medium">Medium</label>
+                
+                <input type="radio" name="pizzaSize" 
+                value="large" id="large">
+                <label for="large">Large</label>
+            </div>
+            <div class="radio">    
+                <h3>Pop Size:</h3>       
+                <input type="radio"
+                name="popSize"
+                value="small" id="small">
+                <label for="small">Small</label>
+                
+                <input type="radio" name="popSize" 
+                value="medium" id="medium">
+                <label for="medium">Medium</label>
+                
+                <input type="radio" name="popSize" 
+                value="large" id="large">
+                <label for="large">Large</label>
+            </div>
+
+            <br />
+            <label for="feedback">Please provide feedback</label>
+	        <textarea name="userFeedback" id="feedback" cols="30" rows="10" minlength="5" maxlength="200"></textarea>
+            <br />
+            <button type="reset">Reset Order Now!</button>
+            <input type="submit" value="Submit Order Now!">
+        </form>
+    </div>
+</body>
+</html>

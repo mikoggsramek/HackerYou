@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<meta charset="UTF-8">
+	<head>
+		<title>CSS Position</title>
+		<style type="text/css">
+			body {
+				margin: 0; /* Just overriding the browser default to zero */
+			}
+
+			.wrapper {
+				width: 500px;
+				margin: 50px auto;
+				border: 2px solid #BADA55;
+				/* position: relative; */
+			}
+
+			.innerWrapper {
+				margin: 50px;
+				border: 2px solid #333;
+				min-height: 300px;
+				position: relative;
+			}
+
+			.box {
+				width: 100px;
+				height: 100px;
+				margin: 5px;
+				position: absolute;
+			}
+
+			.box1 {
+				background: rgba(255, 165, 0, 0.7); /*semi transparent orange*/
+				left: 0px;
+				top:0px;
+			}
+
+			.box2 {
+				background: rgba(65, 105, 255, 0.7); /*semi transparent blue*/
+				right:0px;
+				top:0px;
+			}
+
+			.box3 {
+				background: rgba(255, 0, 0, 0.7); /*semi transparent red*/
+				bottom: 0px;
+				right: 0px;
+			}
+
+			.box4 {
+				background: rgba(0, 138, 0, 0.7); /*semi transparent green*/
+				left:0px;
+				bottom:0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="innerWrapper">
+				<div class="box box1"></div>
+				<div class="box box2"></div>
+				<div class="box box3"></div>
+				<div class="box box4"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>ex4</title>
+		<style type="text/css">
+			body {
+				margin: 0; /* Just overriding the browser default to zero */
+				background:#95A9AF;
+			}
+
+			/* Box sizing border box and clearfix */
+			* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+			.clearfix:after {
+				visibility: hidden;
+				display: block;
+				font-size: 0;
+				content: " ";
+				clear: both;
+				height: 0;
+				}
+			* html .clearfix             { zoom: 1; } /* IE6 */
+			*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+			/*
+				This is a tricky one
+				Set all widths in %, so when you resize the browser, the boxes resize themselves
+				Use widths, margin, padding and floats to replicate the answer
+				I've written all the selectors you need, but you may add more if you want to do it a different way
+			*/
+
+			div {
+				min-height:100px; /* some default styling because the divs have no content */
+			}
+
+			.wrapper {
+				max-width: 70%;
+				border:2px solid black;
+				margin:20px auto;
+				padding: 20px;
+				background-color: white;
+			}
+			.half {
+				background:#F5895F;
+				border:1px solid red;
+				float: left;
+				width: calc((100% / 2) - 20px);
+				padding: 20px;
+				margin: 0px 0;
+			}
+			.left {
+				margin-right: 20px;
+			}
+			.right {
+				margin-left: 20px;
+			}
+			.third {
+				background:yellow;
+				border:1px solid red;
+				float: left;
+				width: calc(100%/3);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Totally Resizeable - Set all widths in %</h1>
+		<div class="wrapper clearfix">
+			<div class="half left">
+				<div class="third"></div>
+				<div class="third"></div>
+				<div class="third"></div>
+			</div>
+			<div class="half right">
+				<div class="third"></div>
+				<div class="third"></div>
+				<div class="third"></div>
+			</div>
+		</div>
+	</body>
+</html>
