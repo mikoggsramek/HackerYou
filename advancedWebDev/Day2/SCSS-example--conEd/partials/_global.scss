@@ -1,0 +1,100 @@
+// setting fonts
+@font-face {
+    font-family: 'Indie Flower';
+    src: url(../styles/fonts/Indie_Flower/IndieFlower.ttf);
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../styles/fonts/Raleway/Ralway-ThinItalic.ttf);
+    font-weight: lighter;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../styles/fonts/Raleway/Ralway-Regular.ttf);
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient((rgba(0,0,0,0.1), rgba(0,0,0,0.1))), url(./images/giraffePattern.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h1, 
+h2, 
+h3 {
+    font-family: 'Indie Flower', cursive;
+}
+
+em {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+// setting font size
+html {
+    font-size: 62.5%;
+}
+
+body {
+    @include fontSize(16);
+}
+
+// wrapper styles
+.max-wrapper {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1020px;
+    width: 65%;
+    margin: 0 auto;
+}
+
+// bubble styles
+.bubble {
+    background: $primaryBackground;
+    border: 1px solid lighten($primaryBackground, 20);
+    text-align: center;
+    border-radius: 4px;
+    padding: 60px;
+    height: 70%;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+// stripping anchor tag default styling
+a {
+    text-decoration: none;
+    // the below means the colour will be inherited from the parent, grand-parent or great-grand-parent depending on where it has been set!
+    color: inherit;
+    @include fontSize(20);
+}
+
+// stripping ul default styling
+ul {
+    list-style: none;
+}
+
+// stripping default margin/padding
+h1,
+h2,
+h3,
+p, 
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Design</title>
+	<style>
+		/* First we do all of our regular CSS for the basics and desktop site */
+		body {
+			background:purple;
+		}
+		.wrapper {
+			max-width: 800px;		
+			margin: 0 auto;
+		}
+
+		/* Then we use media queries for targeting other resolutions */
+
+		/* Portrait tablet and small desktops */
+		@media (max-width: 940px) {
+			body {
+				background:green;
+			}
+		}
+		 
+		/* Landscape phone to portrait tablet */
+		@media (max-width: 767px) {
+			body {
+				background:red;
+			}
+		}
+		 
+		/* Landscape phones and down */
+		@media (max-width: 480px) {
+			body {
+				background:yellow;
+			}
+		}
+
+
+	</style>
+</head>
+	<body>
+		
+		<div class="wrapper">
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nulla eget lacus gravida rutrum. Fusce sit amet tellus arcu. Nam in accumsan diam. Etiam quis augue risus, eget molestie sapien. Fusce vehicula aliquet neque, in cursus tellus venenatis eget. Pellentesque in magna nisl, vel dapibus dolor. Nullam a ante vel libero vehicula aliquet et sit amet mauris. Morbi dapibus pellentesque nisi sit amet sagittis. Aenean mollis porttitor neque. Aenean cursus convallis feugiat. Quisque et nisi sed lectus mattis auctor non at eros.</p>
+			</div>	
+			<div class="sidebar">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nulla eget lacus gravida rutrum. Fusce sit amet tellus arcu. Nam in accumsan diam. Etiam quis augue risus, eget molestie sapien. Fusce vehicula aliquet neque, in cursus tellus venenatis eget. Pellentesque in magna nisl, vel dapibus dolor. Nullam a ante vel libero vehicula aliquet et sit amet mauris. Morbi dapibus pellentesque nisi sit amet sagittis. Aenean mollis porttitor neque. Aenean cursus convallis feugiat. Quisque et nisi sed lectus mattis auctor non at eros.</p>
+			</div>	
+		</div>
+
+		
+	</body>
+</html>

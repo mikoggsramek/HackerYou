@@ -1,0 +1,182 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit;}
+
+/* Animations */
+/* There are 5 animations on this page:
+    1. moving gradient background
+    2. spinning Facebook icon
+    3. wiggling Twitter icon
+    4. shaking Email icon
+    5. pulsing LinkedIn icon
+   Check out the answer key to see what the final result should look like.
+   NOTE: Scroll down to the specific spots in the CSS to create and apply the animations, all keyframes are at the bottom of the file.
+*/
+
+/* ANIMATION 1 */
+/* Moving linear gradient background */
+/*
+   NOTE: Make the background size to be 150% of height and 150% of width.
+*/
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to bottom right, rgb(156, 219, 235), rgb(254,216,127));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* change background size & apply animation */
+    background-size: 150% 150%;
+    animation: gradient 5s ease-in-out infinite alternate;
+}
+
+main {
+    max-width: 700px;
+    padding: 50px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgba(0,0,0, 0.1);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 32px;
+    text-transform: lowercase;
+    font-weight: lighter;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+i {
+    font-size: 42px;
+}
+
+/* ANIMATION 2 */
+/* Spinning Facebook icon */
+.facebook i:hover {
+    /* apply animation */
+    animation: spin 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* ANIMATION 3 */
+/* Wiggling Twitter icon */
+.twitter i:hover {
+    /* apply animation */
+    animation: wiggle 2s infinite ease;
+}
+
+/* ANIMATION 4 */
+/* Shaking email icon */
+.email i:hover {
+     /* apply animation */
+    animation: shake 1s infinite cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* ANIMATION 5 */
+/* Pulsing LinkedIn icon */
+.linkedin i:hover {
+    /* apply animation */
+    animation: pulse 1s infinite ease 0.25s;
+}
+
+
+/* Animations */
+/* ANIMATION 1 */
+/* Moving linear gradient background */
+/*
+   Hint 1: Created using background-position property at different points.
+   Hint 2: Since we made the background size larger than 100% of the space, we can move the background around with background-position, to create a moving gradient background effect.
+ */
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* ANIMATION 2 */
+/* Spinning Facebook icon */
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ANIMATION 3 */
+/* Wiggling Twitter icon */
+/*
+   Hint: Final product uses 5 points.
+*/
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25%, 75% {
+        transform: rotate(-12deg);
+    }
+    50% {
+        transform: rotate(12deg);
+    }
+
+}
+
+/* ANIMATION 4 */
+/* Shaking email icon */
+/*
+   Hint 1: Animation is pretty much moving the element side to side on the X axis.
+   Hint 2: It's fine if exact pixel and % values are different from the answer key. Every animation is perfect for customization.
+*/
+@keyframes shake {
+    0%, 90% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70% {
+        transform: translateX(-2px);
+    }
+    20%, 40%, 60%, 80%{
+        transform: translateX(2px);
+    }
+}
+
+/* ANIMATION 5 */
+/* Pulsing LinkedIn icon */
+/*
+   Hint 1: The element gets larger and smaller in this animation to create this pulsing effect.
+   Hint 2: Answer key animation uses 6 points.
+*/
+@keyframes pulse {
+    40%, 80%{
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1);
+    } 
+    60% {
+        transform: scale(1.07);
+    }
+}

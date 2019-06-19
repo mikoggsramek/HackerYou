@@ -1,0 +1,61 @@
+html {
+    font-size: 62.3%;
+    // text-align: center;
+}
+
+body {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.wrapper {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.threeColumns {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+.button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    display:inline;
+}
+.button-primary {
+    background-color: $primaryColour;
+    a,
+    a:visited {
+        color: $primaryWhite;
+    } 
+}
+
+.flex-container {
+    display: flex;
+}
+
+// h1,
+// h2,
+// p,
+// a,
+// li,
+// ul,
+// figure,
+// div,
+// .wrapper {
+//     border: 1px rebeccapurple solid;
+// }

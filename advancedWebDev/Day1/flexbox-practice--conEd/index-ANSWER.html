@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox ANSWER</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        h1 {
+            color: #546E7A;
+        }
+
+        h2 {
+            color: rgb(206, 148, 1);
+        }
+
+        .flex-child1{background-color: #7CB342;}
+        .flex-child2{background-color: #00897B;}
+        .flex-child3{background-color: #00ACC1;}
+        .flex-child4{background-color: #039BE5;}
+        .flex-child5{background-color: #1E88E5;}
+        .flex-child6{background-color: #3949AB;}
+        .flex-child7{background-color: #5E35B1;}
+        .flex-child8{background-color: #8E24AA;}
+        .flex-child9{background-color: #D81B60;}
+        .flex-child10{background-color: #E53935;}
+
+        .wrapper {
+            max-width: 800px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        section {
+            border: 5px dotted #546E7A;
+            padding: 35px;
+            margin: 50px 0;
+        }
+
+        ul {
+            border: 10px solid #FDD835;
+            list-style-type: none;
+            padding: 0;
+            color: white;
+            font-size: 30px;
+            margin: 0 0 50px;
+        }
+
+        /* Flexbox Exercise: Practice with justify-content, align-items, align-content */
+        /*
+            There are 5 exercises that focus on justify-content, align-items, and align-content.
+            Other flexbox properties may be necessary to create the desired effects.
+
+            OPEN UP index-ANSWER.html in your browser for reference when attempting to solve each exercise.
+         */
+
+        /* flex-child code. No need to make changes to this! */
+        .flex-child {
+            width: 75px;
+            height: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Exercise 1 */
+        /* Space the flex children out so that there is the same space between the elements as well as on the ends. */
+        .flex-container1 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        /* Exercise 2 */
+        /* Style the flex container so that the flex children are in a column, and centered horizontally. */
+        .flex-container2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Exercise 3 */
+        /* Center the flex children in the container, both horizonally and vertically. */
+        .flex-container3 {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Exercise 4 */
+        /*
+            Make the flex children wrap down to the next line (instead of squishing themselves down) when there is not enough space for them to all be 75px.
+
+            Arrange the content so that the flex-children behave like the answer key when they start wrapping down. (With no spaces at the edge rows, but even spacing in between each row that is created when wrapping)
+        */
+        .flex-container4 {
+            height: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            justify-content: center;
+        }
+
+        /* Exercise 5 */
+        /*
+            Make the flex children wrap vertically in the flex container.
+
+            Arrange the content so that the flex-children behave like the answer key when they start wrapping vertically.(Centered, vertically and horizontally, with no space in between each column.)
+         */
+        .flex-container5 {
+            height: 325px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- wrapper -->
+    <div class="wrapper">
+        <h1>Flexbox Exercises</h1>
+        <p>Practice with justify-content, align-items, align-content</p>
+
+        <section>
+            <h2>Exercise 1</h2>
+            <p>Space the flex children out so that there is the same space between the elements as well as on the ends.</p>
+            <!-- flex-container 1 -->
+            <ul class="flex-container1">
+                <li class="flex-child flex-child1">1</li>
+                <li class="flex-child flex-child2">2</li>
+                <li class="flex-child flex-child3">3</li>
+                <li class="flex-child flex-child4">4</li>
+                <li class="flex-child flex-child5">5</li>
+            </ul><!--end of flex-container1-->
+        </section>
+
+        <section>
+            <h2>Exercise 2</h2>
+            <p>Style the flex container so that the flex children are in a column, and centered horizontally.</p>
+            <!-- flex-container2 -->
+            <ul class="flex-container2">
+                <li class="flex-child flex-child1">1</li>
+                <li class="flex-child flex-child2">2</li>
+                <li class="flex-child flex-child3">3</li>
+                <li class="flex-child flex-child4">4</li>
+                <li class="flex-child flex-child5">5</li>
+            </ul><!--end of flex-container2-->
+        </section>
+
+        <section>
+            <h2>Exercise 3</h2>
+            <p>Center the flex children in the container, both horizonally and vertically.</p>
+            <!-- flex-container3 -->
+            <ul class="flex-container3">
+                <li class="flex-child flex-child1">1</li>
+                <li class="flex-child flex-child2">2</li>
+                <li class="flex-child flex-child3">3</li>
+            </ul><!--end of flex-container3-->
+        </section>
+
+        <section>
+            <h2>Exercise 4</h2>
+            <p>Make the flex children wrap down to the next line (instead of squishing themselves down) when there is not enough space for them to all be 75px.</p>
+            <p>Arrange the content so that the flex-children behave like the answer key when they start wrapping down. (With no spaces at the edge rows, but even spacing in between each row that is created when wrapping)</p>
+            <!-- flex-container4 -->
+            <ul class="flex-container4">
+                <li class="flex-child flex-child1">1</li>
+                <li class="flex-child flex-child2">2</li>
+                <li class="flex-child flex-child3">3</li>
+                <li class="flex-child flex-child4">4</li>
+                <li class="flex-child flex-child5">5</li>
+                <li class="flex-child flex-child6">6</li>
+                <li class="flex-child flex-child7">7</li>
+                <li class="flex-child flex-child8">8</li>
+                <li class="flex-child flex-child9">9</li>
+                <li class="flex-child flex-child10">10</li>
+            </ul><!--end of flex-container4-->
+        </section>
+
+        <section>
+            <h2>Exercise 5</h2>
+            <p>Make the flex children wrap vertically in the flex container.</p>
+            <p>Arrange the content so that the flex-children behave like the answer key when they start wrapping vertically.(Centered, vertically and horizontally, with no space in between each column.)</p>
+            <!-- flex-container5 -->
+            <ul class="flex-container5">
+                <li class="flex-child flex-child1">1</li>
+                <li class="flex-child flex-child2">2</li>
+                <li class="flex-child flex-child3">3</li>
+                <li class="flex-child flex-child4">4</li>
+                <li class="flex-child flex-child5">5</li>
+                <li class="flex-child flex-child6">6</li>
+                <li class="flex-child flex-child7">7</li>
+                <li class="flex-child flex-child8">8</li>
+                <li class="flex-child flex-child9">9</li>
+                <li class="flex-child flex-child10">10</li>
+            </ul><!--end of flex-container5-->
+        </section>
+    </div><!--end of wrapper-->
+</body>
+</html>

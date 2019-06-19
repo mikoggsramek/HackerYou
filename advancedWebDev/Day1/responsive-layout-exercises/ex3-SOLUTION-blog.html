@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+
+    <style type="text/css">
+        * {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%; /* makes font 10px */
+            font-family: sans-serif;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .wrapper {
+            width: 90%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 5.5rem;
+            font-family: serif;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-family: sans-serif;
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        h4 {
+            font-size: 4rem;
+            font-family: serif;
+            background-color: #fff;
+            padding: 15px;
+            margin: 0;
+            display: inline-block;
+        }
+
+        h5 {
+            font-size: 2.2rem;
+            font-weight: 200;
+            margin: 0;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+
+        p {
+            font-size: 1.6rem;
+            font-family: serif;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin: 45px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 700;
+            color: #444;
+            border-bottom: 1px solid transparent;
+            font-size: 2rem;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #333;
+        }
+
+        nav a {
+            text-transform: uppercase;
+        }
+
+
+        /* First we do all of our regular CSS for the basics and desktop site */
+        /* Then we use media queries for targeting other resolutions */
+
+        header,
+        .home,
+        .about,
+        .blog,
+        .blog-post {
+            float: left;
+            margin-top: 30px;
+        }
+
+        header,
+        .about {
+            width: 25%;
+        }
+
+        .home {
+            position: relative;
+        }
+
+        .overlay-text {
+            position: absolute;
+            right: 0;
+            bottom: 50px;
+            text-align: right;
+        }
+
+        .home,
+        .blog {
+            width: 75%;
+        }
+
+        .about p {
+            line-height: 3rem;
+            padding-right: 15px; /* just to give a little white space */
+        }
+
+        .blog-post {
+            width: calc((100%/3) - 2%); /* 3 in a row, all with 1% margin on each side */
+            margin: 1%;
+        }
+
+        .blog-post img {
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            margin: 0;
+            background-color: #eee;
+            padding: 5px 20px;
+        }
+
+        .blog-content a:hover p {
+            text-decoration: underline;
+        }
+
+        /* Portrait tablet and small desktops */
+        @media (max-width: 980px) {
+            header,
+            .home {
+                width: 100%;
+            }
+
+            h1,
+            nav {
+                float: left; /* to get h1 and hav to line up next to each other */
+            }
+
+            h1 {
+                width: 25%;
+            }
+
+            nav {
+                width: 75%;
+            }
+
+            ul {
+                text-align: right;
+            }
+
+            li {
+                display: inline-block;
+                margin: 10px;
+            }
+
+        }
+
+        /* Landscape phone to portrait tablet */
+        @media (max-width: 767px) {
+            h1,
+            nav {
+                width: 100%;
+            }
+
+            ul {
+                text-align: center;
+            }
+
+            .about,
+            .blog {
+                width: 100%;
+            }
+
+            h2 {
+                border-bottom: 1px solid #333;
+            }
+
+            .wrapper {
+                width: 80%;
+            }
+        }
+
+        /* Landscape phones and down */
+        @media (max-width: 480px) {
+            .wrapper {
+                width: 95%;
+            }
+
+            nav a {
+                font-size: 1.5rem;
+            }
+
+            .about p {
+                padding-right: 0;
+            }
+
+            .blog-post {
+                width: 100%;
+                margin: 15px 0;
+            }
+
+            .overlay-text {
+                bottom: 0;
+            }
+
+            h4 {
+                font-size: 2rem;
+                padding: 10px;
+            }
+
+            h5 {
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper clearfix">
+        <header>
+            <h1>Yum!</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Chat</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="home" id="home">
+            <div class="overlay-text">
+                <h4>Delicious Stuff</h4>
+                <h5>All food is delicious, just everything</h5>
+            </div>
+            <img src="./assets/blog-1.jpg" alt="Bowls of colour fruit, oats, and coffee, sitting on a white wooden table surrounded by peonies.">
+        </section>
+
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <p>Wow, food, is just so so good. Food is, so beautiful, and smells so good, and like, just look at all these food posts I have. I love food. Honestly.</p>
+            <p>Because, wow. Salads are delicious. Fruits are just juicy and full of nutrients.</p>
+        </section>
+
+        <section class="blog" id="blog">
+            <h2>Blog Posts</h2>
+            <div class="blog-post">
+                <img src="./assets/blog-2.jpg" alt="Strawberry filled smoothie bowl.">
+                <div class="blog-content">
+                    <h3>Smoothies!! Yo</h3>
+                    <a href="#">
+                        <p>Read More</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="./assets/blog-3.jpg" alt="Frosted lemon loaf. ">
+                <div class="blog-content">
+                    <h3>Lemon Cake</h3>
+                    <a href="#">
+                        <p>Read More</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="./assets/blog-4.jpg" alt="Plates of spinach spaghetti.">
+                <div class="blog-content">
+                    <h3>Pasta is Wow.</h3>
+                    <a href="#">
+                        <p>Read More</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div> <!-- wrapper end -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery</title>
+
+    <style type="text/css">
+        /*
+			This exercise will get you used to media queries. If you need help, check out the media query class!
+			Using CSS, match the answer. We've provided the media queries for you.
+		*/
+        * {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+
+        /* First we do all of our regular CSS for the basics and desktop site */
+        /* Then we use media queries for targeting other resolutions */
+
+        img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card {
+            height: 220px;
+            margin: 1%;
+            width: calc((100%/3) - 2%); /* 3 in a row, all with 1% margin on each side */
+            float: left; /* puts pictures into a line */
+        }
+
+
+        /* Portrait tablet and small desktops */
+        @media (max-width: 940px) {
+            .wrapper {
+                width: 100%;
+            }
+        }
+
+        /* Landscape phone to portrait tablet */
+        @media (max-width: 767px) {
+            .half {
+                width: calc(50% - 2%);
+            }
+
+            .full {
+                width: calc(100% - 2%);
+            }
+
+            .quarter {
+                width: calc(25% - 2%);
+            }
+
+            .three-fourths {
+                width: calc(75% - 2%);
+            }
+        }
+
+        /* Landscape phones and down */
+        @media (max-width: 480px) {
+            .card {
+                width: calc(100% - 2%);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper clearfix">
+        <div class="card half">
+            <img src="./assets/gallery-1.jpg" alt="A sparkler flickering while held up.">
+        </div>
+
+        <div class="card half">
+            <img src="./assets/gallery-2.jpg" alt="Bright, empty, rainbow coloured corridor that curves right.">
+        </div>
+
+        <div class="card full">
+            <img src="./assets/gallery-3.jpg" alt="Teal ocean against a peach coloured horizon.">
+        </div>
+
+        <div class="card quarter">
+            <img src="./assets/gallery-4.jpg" alt="A girl in fall clothing smiling, surrounded by bubbles on a busy city street.">
+        </div>
+
+        <div class="card three-fourths">
+            <img src="./assets/gallery-5.jpg" alt="Black and navy galaxy patterned with white specks of stars. ">
+        </div>
+
+        <div class="card full">
+            <img src="./assets/gallery-6.jpg" alt="Person holding smiling emoji balloons that cover their face, standing against a brightly patterend graffiti wall.">
+        </div>
+
+        <div class="card three-fourths">
+            <img src="./assets/gallery-7.jpg" alt="Yellow green bush of leaves with white feathery outlines.">
+        </div>
+
+        <div class="card quarter">
+            <img src="./assets/gallery-8.jpg" alt="Lavender coloured crystal cluster on a light blue table.">
+        </div>
+
+        <div class="card full">
+            <img src="./assets/gallery-9.jpg" alt="Leopard perched on a cliff against the afternoon sky.">
+        </div>
+    </div>
+
+</body>
+
+</html>

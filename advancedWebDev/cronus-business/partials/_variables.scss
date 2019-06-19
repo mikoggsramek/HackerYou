@@ -1,0 +1,15 @@
+$primaryColour: #6e45e2;
+
+
+$primaryAccent: #ed145b;
+$secondaryAccent: #0d4ef7;
+
+$primaryBlack: #171717;
+$primaryGray: #f1f8fc;
+$primaryWhite: #fff;
+
+$lightPrimary: lighten(transparentize($primaryAccent, 0.4), 20);
+$lightAccent: lighten(transparentize($secondaryAccent, 0.4), 20);
+
+
+$anchorTagHoverFocus: "a:hover, a:focus";

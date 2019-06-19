@@ -1,0 +1,31 @@
+nav {
+    position: sticky;
+    top: 0;
+    text-transform: uppercase;
+    min-height: 70px;
+    background: $navFooterBackground;
+    color: $primaryWhite;
+    @include flexCenter;
+
+        ul {
+            width: 60%;
+            min-width: 400px;
+            display: flex;
+        }
+
+        li {
+            width: 33.33%;
+            text-align: center;
+        }
+
+        a {
+            padding: 10px;
+            color: inherit;
+            letter-spacing: 1.2px;
+            border: 2px solid transparent;
+        }
+
+        #{$anchorTagHoverFocus} {
+            border: 2px solid $primaryWhite;
+        }
+}

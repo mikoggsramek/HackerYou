@@ -1,0 +1,12 @@
+@import "./utility.scss";
+@import "./variablesMixins";
+.box {
+    height: 200px;
+    // width: 200px;
+    background-color: $primaryColor;
+    // margin: 1%;
+    float: left;
+    width: (100%/10);
+    @include colourChildren(10, $primaryColor, 10);
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fidget Animation ANSWER</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(215, 206, 221);
+        }
+
+        div {
+            position: absolute;
+            top: 80px;
+        }
+
+        .arrow {
+            position: relative;
+            left: -100px;
+            top: -20px;
+            width: 130px;
+            transform: rotate(60deg);
+        }
+
+        .fidget {
+            width: 300px;
+        }
+
+        /* FIDGET SPINNER */
+        /* Open up indexANSWER.html in the browser to see what the animation should look like! */
+
+        /*
+        Create the animation and call it "spin". Only 2 points are needed for this animation. You can use "from" & "to" or 0% & 100%.
+        */
+         @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /*
+        Apply the animation on hover. Feel free to start the animation duration off slow to see how the animation plays out during debugging. The final animation duration is 0.3s.
+        */
+        .fidget:hover {
+            animation: spin 0.3s linear infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hover to spin</h1>
+        <img src="./assets/arrow.png" alt="Black arrow that is pointing downwards towards the image below it, which is a fidget spinner." class="arrow">
+    </div>
+    <img src="./assets/fidget-spinner.png" alt="Yellow 3 prong fidget spinner." class="fidget">
+</body>
+</html>

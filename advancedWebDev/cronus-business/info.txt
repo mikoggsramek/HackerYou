@@ -1,0 +1,13 @@
+Fonts
+Nunito (Google Fonts)
+Libre Baskerville (Google Fonts)
+
+Icons
+Font Awesome
+
+Colours
+Purple #6e45e2
+Pink #ed145b
+Blue #0d4ef7
+Black #171717
+Grey #f1f8fc

@@ -1,0 +1,61 @@
+section {
+    &.wrapper {
+        margin: 60px auto;
+    }
+
+    h3 {
+        text-align: center;
+        @include fontSize(45);
+        text-transform: capitalize;
+        margin: 0 0 30px 0;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.giraffe-facts-section {
+    div {
+
+        p, 
+        div {
+                width: 50%;
+            }
+
+        p {
+            margin-left: 10px;
+        }
+
+        }
+}
+
+.gallery {
+    div {
+        flex-wrap: wrap;
+
+        div {
+            width: 250px;
+            margin: 10px;
+        }
+    }
+}
+
+.links {
+    div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    a {
+        @include fontSize(20);
+        display: inline-block;
+        padding: 10px 0;
+    }
+
+    #{$anchorTagHoverFocus} {
+        color: $primaryAccent;
+    }
+}

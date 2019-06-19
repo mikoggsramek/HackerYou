@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Before and After</title>
+
+	<style>
+		* {
+		    box-sizing: border-box;
+		}
+
+		.wrapper {
+			width: 40%;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+		
+		body {
+			line-height: 1.25;
+		}
+
+		blockquote {
+			background: aliceblue;
+			padding: 30px;
+			position: relative;
+		}
+		
+		blockquote p {
+			margin: 0;
+			color: navy;
+			font-size: 18px;
+		}
+		blockquote::before {
+			content: "“";
+			top:0;
+			left:0;
+		}
+		blockquote::after {
+			content: "”";
+			bottom: -30px;
+			right:0;
+		}
+
+		blockquote::before,
+		blockquote::after {
+			font-size: 50px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<!-- MAIN ELEMENT STARTS HERE -->
+	<main>
+
+		<section>
+			<div class="wrapper">
+				<h1>Lorem Ipsum</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolore corporis, dignissimos nisi aspernatur dolorum deleniti. Neque id minus deleniti non quam voluptas cumque, ducimus assumenda. Quia ea aspernatur beatae, animi. Quibusdam, nisi, maiores. Quos possimus laudantium illum. Dolore fugiat odit sit sed nobis vitae commodi libero itaque cum saepe excepturi neque consequatur corporis, eos quam sint autem porro quisquam cumque, facere ab enim amet fugit eius! Voluptatem, assumenda!</p>
+				<p>Impedit nihil, facere aspernatur nisi mollitia voluptates libero est modi voluptatem doloribus laudantium enim dolores quasi, cupiditate corporis nemo minima illo. Fugit odit obcaecati ipsa sed illo ut, quis ullam qui.</p>
+				<blockquote>
+					<p>Neque id minus deleniti non quam voluptas cumque, ducimus assumenda. Quia ea aspernatur beatae, animi. Quibusdam, nisi, maiores.Fugit odit obcaecati ipsa sed illo ut, quis ullam qui.</p>
+				</blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quos quis, fugit. Accusamus nostrum, aspernatur explicabo totam. Commodi sapiente molestias illum dolores mollitia corrupti, sed, odit quidem iure fugiat ad recusandae laboriosam doloremque molestiae numquam eius impedit cupiditate! Voluptate placeat maiores ex, deleniti libero amet excepturi quis, beatae maxime hic.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis totam ad pariatur aut, voluptatum at consectetur dolore ratione numquam nobis mollitia vero architecto. Laboriosam repellat odio culpa ad accusantium doloribus.</p>
+			</div>
+		</section>		
+	</main>
+</body>
+</html>

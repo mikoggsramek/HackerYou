@@ -1,0 +1,96 @@
+h1 {
+    // padding-top: 150px;
+    margin  : 0;
+    font-size: 6.9rem;
+}
+
+.imageIndex p {
+    font-size: 1.3rem;
+    padding: 5px 0;
+}
+
+.vertical {
+    writing-mode: vertical-lr;
+}
+
+header {
+    background-image: linear-gradient(to top right, $lightAccent 40%, $lightPrimary 60%), url("../assets/image-1.jpeg");
+    background-size: cover;
+    background-position-y: 75%;
+    min-height: 100vh;
+    text-align: center;
+    // padding:2%;
+    padding: 2% 25px;
+
+    
+    .wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .fas,
+    p,
+    h1,
+    a {
+        color:white;
+    }
+    ul {
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a,
+    p {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    p {
+        text-transform: uppercase;
+        margin: 0;
+    }
+    figure {
+        margin: 0;
+        padding: 0 0px;
+    }
+
+    .flex-container {
+        padding-top: 150px;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            flex: 0 0 50%;
+        }
+    }
+
+    nav figure:last-of-type {
+        display: flex;
+        align-items: center;
+        margin-left: 22px;
+        .fas {
+            font-size: 1.2rem;
+        }
+        img {
+            border-radius: 50%;
+            border: 1px solid white;
+
+            margin: 0 10px 0 25px;
+
+            $size: 15px;
+            width: $size;
+            height: $size;
+        }
+    }
+
+}
+
+aside p {
+    text-transform: lowercase;
+}
+

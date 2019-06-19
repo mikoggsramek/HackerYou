@@ -1,0 +1,52 @@
+
+
+
+$primaryColor: #4371A6;
+
+
+
+
+@mixin colourChildren($n, $startColour, $amount) {
+    @for $_ from 0 through $n+1 {
+        &:nth-child(#{$_}){
+            background-color:hueShift($startColour, $amount, $_);
+        }
+    }   
+}
+
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin screen($size) {
+    $desktop: "(min-width: 1024px)";
+    $tablet: "(min-width: 768px) and (max-width: 1023px)";
+    $mobile: "(max-width: 767px)";
+    @if $size == desktop {
+      @media only screen and (#{$desktop}) {
+        @content;
+      }
+    }
+    @else if $size == tablet {
+      @media only screen and (#{$tablet}) {
+        @content;
+      }
+    }
+    @else if $size == mobile {
+      @media only screen and (#{$mobile}) {
+        @content;
+      }
+    }
+    @else {
+      @media only screen and (#{$size}) {
+        @content;
+      }
+    }
+  }
+  
+  

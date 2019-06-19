@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3 Transforms & Transitions!</title>
+  <style>
+    body {
+      background:#16a085;
+    }
+    .polaroid {
+      border:10px solid white;
+      border-bottom:50px solid white;
+      box-shadow:0 0 10px rgba(0,0,0,0.3);
+      border-radius:2px;
+      position: absolute;
+      z-index: 0;
+      transition: 0.75s;
+    }
+
+    .polaroid:hover {
+      transform: rotate(0deg) scale(2);
+      z-index: 100;
+    }
+
+    .polaroid1 {
+      left:100px;
+      top:40px;
+      transform: rotate(-15deg);
+    }
+  
+
+    .polaroid2 {
+      left:80px;
+      top:150px;
+      transform: rotate(12deg);
+    }
+    
+
+    .polaroid3 {
+      left:250px;
+      top:100px;
+      transform: rotate(10deg);
+    }
+
+    .polaroid4 {
+      left:350px;
+      top:100px;
+      transform: rotate(43deg);
+    }
+
+    .polaroid5 {
+      left: 290px;
+      top: 300px;
+      transform: rotate(-27deg);
+    }
+
+  </style>
+</head>
+<body>
+  <img src="images/my-bff-is-on-vacay.jpg" class="polaroid polaroid1">
+  <img src="images/lazy-day-everyday.jpg" class="polaroid polaroid2">
+  <img src="images/me-time.jpg" class="polaroid polaroid3">
+  <img src="images/game-day.jpg" class="polaroid polaroid4">
+  <img src="images/sun-tan.jpg" class="polaroid polaroid5">
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Flip</title>
+  <!-- This exercise will show us how to create 3d animations. Check out The Transforms class if you want to look over the notes again! -->
+  <style>
+    body {
+      background-color: gainsboro;
+      /* display: flex; */
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .wrapper { 
+      max-width: calc((225px * 3) + (20px * 3));
+      margin: 0 auto;
+    }
+    .card {
+      height:250px;
+      width: 225px;
+      background-color: gainsboro;
+      position: relative;
+      perspective: 800px;
+      /* perspective-origin: 0% 50%; */
+      margin: 50px 10px;
+    }
+
+    .front,
+    .back {
+      position: absolute;
+      width:100%;
+      top:0;
+      bottom:0;
+      backface-visibility: hidden;
+      transition: 0.5s;
+      text-align: center;
+      padding-top:12px;
+    }
+
+    
+    .front {
+      background-color: white;
+      transform:rotateY(0deg);
+    }
+    .card:hover .back{
+      transform: rotateY(0deg);
+    }
+    .back {
+      background-color: white;
+      transform: rotateY(180deg);
+      /* padding-top: 175px; */
+      font-family: cursive;
+    }
+    .back span {
+      position: absolute;
+      transform: rotate(12deg);
+      text-align: center;
+      font-size: 25px;
+      padding-top: 50px;
+      right: 10%;
+    }
+    .card:hover .front{
+      transform: rotateY(-180deg);
+    }
+  </style>
+</head>
+<body>
+	  <!-- First we need to set some default styles on our card class, then the front and back elements. Make them different colours so we can tell them a part -->
+	  <!-- We need to position the front and back on top of one another in relation to our card -->
+	  <!-- We want the back side of our card to be flipped, so let's use transform: rotateY(180deg), so that by default it's flipped -->
+	  <!-- We want both the front and back of the card to not show their backfaces when flipped, because we want to see the opposite side of the card instead. -->
+	  <!-- Next we want to create the flipping action when we hover over the whole card. To do this we need to select the front on hover of the card and apply a transform, then separately select the back of the card on hover of the card -->
+	  <!-- Our last step is to add perspective to give the card flip a 3d look. Experiment with different values. 800px should give you what you imagine. 100px will be very exaggerated. -->
+  <div class="wrapper gallery">
+    <div class="card">
+      <div class="front"><img src="../Day3/polaroid-exercise/images/my-bff-is-on-vacay.jpg"></div>
+      <div class="back"><span>April - 2019</span></div>
+    </div>
+    <div class="card">
+      <div class="front"><img src="../Day3/polaroid-exercise/images/lazy-day-everyday.jpg"></div>
+      <div class="back"><span>June - 2019</span></div>
+    </div>
+    <div class="card">
+      <div class="front"><img src="../Day3/polaroid-exercise/images/me-time.jpg"></div>
+      <div class="back"><span>December - 2019</span></div>
+    </div>
+    <div class="card">
+      <div class="front"><img src="../Day3/polaroid-exercise/images/sun-tan.jpg"></div>
+      <div class="back"><span>July - 2018</span></div>
+    </div>
+    <div class="card">
+      <div class="front"><img src="../Day3/polaroid-exercise/images/game-day.jpg"></div>
+      <div class="back"><span>September - 2017</span></div>
+    </div>
+  </div>
+</body>
+</html>

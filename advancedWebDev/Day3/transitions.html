@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transitions</title>
+
+    <style>
+        /* .myBox {
+            width:200px;
+            height:200px;
+            background:red;
+            transition: width 1s cubic-bezier(0.19, 1, 0.22, 1), height 1s cubic-bezier(0.19, 1, 0.22, 1), background 2s;
+        }
+
+        .myBox:hover {
+            width:500px;
+            height: 500px;
+            background: darkcyan;
+            transition: width 1s ease;
+        } */
+        .myBox {
+	width:200px;
+	height:200px;
+	background:purple;
+	color:white;
+	transition:all 2s;
+	box-sizing:border-box;
+}
+.myBox:hover {
+	width:1000px;
+	height:500px;
+	border:10px dotted green;
+	background:yellow;
+	border-radius:50%;
+	padding:10%;
+	margin:50px;
+	text-align: center;
+	box-shadow: 0 0 20px red;
+	color:black;
+}
+    </style>
+</head>
+<body>
+    <div class="myBox"></div>
+</body>
+</html>

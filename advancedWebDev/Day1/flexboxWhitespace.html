@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox Whitespace</title>
+	<style>
+		/* box sizing border box */
+		* {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		/* different background colors for each flex item to easily distinguish them apart */
+		.flexItem1 { background:#A3CB38;}
+		.flexItem2 { background:#009432;}
+		.flexItem3 { background:#006266;}
+		.flexItem4 { background:#1289A7;}
+		.flexItem5 { background:#0652DD;}
+		.flexItem6 { background:#1B1464;}
+		.flexItem7 { background:#5758BB;}
+		.flexItem8 { background:#9980FA;}
+		.flexItem9 { background:#B53471;}
+		
+		/* flex container styles */
+		.flexContainer {
+			height: 500px;
+			border: 10px solid salmon;
+			display: flex;
+		}
+		
+		/* flex item styles */
+		.flexItem {
+			text-shadow: 2px 2px 0px #000;
+			font-weight: 700;
+			width: 100px;
+			height: 100px;
+			font-size: 40px;
+			padding: 25px;
+			color: white;
+			text-align: center;
+			flex-shrink: 1;
+		}
+		.flexItem2 {
+			flex-shrink: 3;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- title -->
+	<h1>Flexbox Whitespace</h1>
+	
+	<!-- flex container -->
+	<div class="flexContainer">
+	  <div class="flexItem flexItem1">1</div>
+	  <div class="flexItem flexItem2">2</div>
+	  <div class="flexItem flexItem3">3</div>
+	  <div class="flexItem flexItem4">4</div>
+	  <div class="flexItem flexItem5">5</div>
+	  <div class="flexItem flexItem6">6</div>
+	  <div class="flexItem flexItem7">7</div>
+	  <!-- <div class="flexItem flexItem8">8</div>
+	  <div class="flexItem flexItem9">9</div> -->
+	</div>
+</body>
+</html>

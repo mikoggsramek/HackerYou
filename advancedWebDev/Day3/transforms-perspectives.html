@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>T & P</title>
+
+    <style>
+        flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .mySquare {
+            width: 200px;
+            height: 200px;
+            background: orangered;
+            /* transform: rotate(0deg); */
+            transition: transform 1s;
+        }
+        .mySquare:hover {
+            transform: scale(1.2) rotate(-10deg);
+        }
+
+        .image {
+            z-index: 0;
+            margin: 10px;
+            transition:all 0.5s;
+        }
+        .image:hover {
+            z-index: 100;
+            transform: scale(2);
+        }
+
+        section {
+            perspective: 800px;
+            margin: 100px;
+        }
+        .card {
+            width: 200px;
+            height: 200px;
+            background: darkcyan;
+            transform: rotateY(70deg);
+        }
+    </style>
+</head>
+<body>
+    <section class="flex">
+        <div class="mySquare">
+            <h2>Title</h2>
+        </div>
+
+        <img src="https://unsplash.it/200/200/?random" class="image">
+        <img src="https://unsplash.it/200/200/?random" class="image">
+        <img src="https://unsplash.it/200/200/?random" class="image">
+        <img src="https://unsplash.it/200/200/?random" class="image">
+    </section>
+    <section>
+        <div class="card"></div>
+    </section>
+</body>
+</html>

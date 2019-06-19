@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page</title>
+
+    <style type="text/css">
+        /*
+			This exercise will get you used to media queries. If you need help, check out the media query class!
+			Using CSS, match the answer. We've provided the media queries for you.
+		*/
+		* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0;}
+
+        html {
+            font-size: 62.5%; /* makes font 10px */
+        }
+
+        body {
+            background-color: #b9b4af;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            position: relative;
+            width: 70%;
+            text-align: center;
+            height: 100vh;
+        }
+
+        /* First we do all of our regular CSS for the basics and desktop site */
+		/* Then we use media queries for targeting other resolutions */
+
+        h1 {
+            font-size: 8rem;
+        }
+
+        .underline {
+            border-bottom: 1px solid white;
+        }
+
+        .landing {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Portrait tablet and small desktops */
+        /* background color #B0A4A2 */
+		@media (max-width: 940px) {
+            body {
+                background-color: #B0A4A2;
+            }
+		}
+
+		/* Landscape phone to portrait tablet */
+        /* background color #988583 */
+		@media (max-width: 767px) {
+            body {
+                background-color: #988583;
+            }
+		}
+
+		/* Landscape phones and down */
+        /* background color #7e6562 */
+		@media (max-width: 480px) {
+            body {
+                background-color:#82726e;
+            }
+
+            h1 {
+                font-size: 6rem;
+            }
+		}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="landing">
+            <h1>
+                <span class="underline">Coffee.</span>
+                <span class="underline">Tea.</span>
+                <span class="underline">Beans</span>
+            </h1>
+        </section>
+    </div>
+
+</body>
+</html>

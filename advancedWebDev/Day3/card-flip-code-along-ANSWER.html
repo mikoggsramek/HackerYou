@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Flip</title>
+
+  <!-- First we need to set some default styles on our card class, then the front and back elements. Make them different colours so we can tell them a part -->
+  <!-- We need to position the front and back on top of one another in relation to our card -->
+  <!-- We want the back side of our card to be flipped, so let's use transform: rotateY(180deg), so that by default it's flipped -->
+  <!-- We want both the front and back of the card to not show their backfaces when flipped, because we want to see the opposite side of the card instead. -->
+  <!-- Next we want to create the flipping action when we hover over the whole card. To do this we need to select the front on hover of the card and apply a transform, then separately select the back of the card on hover of the card -->
+  <!-- Our last step is to add perspective to give the card flip a 3d look. Experiment with different values. 800px should give you what you imagine. 100px will be very exaggerated. -->
+  <style>
+    .card {
+      width:250px;
+      height:250px;
+      position: relative;
+      perspective: 800px;  /*important for how "in yo face" the flip is. The lower the value, the closer you will view the transform" */
+      /*transform-style: preserve-3d;*/
+    }
+
+    .front, .back {
+      /* some styling for each card */
+      position: absolute;
+      height:100%;
+      width:100%;
+      transition:all 0.5s;
+      backface-visibility:hidden;  /*This means that when it is flipped over, we don't see the back */
+    }
+
+    .front {
+      background:#16a085; /* green */
+    }
+    .back {
+      background:#f1c40f; /*orange */
+      transform:rotateY(180deg);  /*By Default set the back to be rotate */
+    }
+
+    .card:hover .back {
+      transform:rotateY(0);
+    }
+
+    .card:hover .front {
+      transform:rotateY(-180deg);
+    }
+  </style>
+
+</head>
+<body>
+  
+  <div class="card">
+    <div class="front">I'm the front!</div>
+    <div class="back">I'm the back!</div>
+  </div>
+
+</body>
+</html>

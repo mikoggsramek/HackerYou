@@ -1,0 +1,5 @@
+@function hueShift($color, $amount, $step) {
+    $cur: hue($color);
+    $newColour: adjust-color($color, $hue: $amount * $step);
+    @return $newColour;
+}

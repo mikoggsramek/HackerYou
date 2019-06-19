@@ -1,0 +1,30 @@
+// variables
+
+    // font colours + pseudo states
+    $primaryBlack: #040405;
+    $primaryWhite: #FDFDFD;
+    $primaryAccent: darksalmon;
+
+    // background colours
+    $primaryBackground: lightblue;
+    $navFooterBackground: rgba($primaryBlack, 0.6);
+
+    // anchor tags on hover & focus
+    $anchorTagHoverFocus: 'a:focus, a:hover';
+
+// mixins
+
+    // font sizes turn into rem values
+    @mixin fontSize($sizeValue){
+        font-size: $sizeValue * 1px;
+        font-size: ($sizeValue/10) * 1rem;
+    }
+
+    // vertical + horizontal centering w/ flexbox
+    @mixin flexCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
