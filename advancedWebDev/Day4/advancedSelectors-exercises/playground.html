@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Advanced Selector Fun</title>
+	<link rel="stylesheet" href="playground.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+	<h1>Advanced Selectors</h1>
+
+	<div class="select">
+		<h2>Adjacent Selectors + </h2>
+		<p>Select only the dog element next to a cat element</p>
+
+		<div class="cat">Cat</div>
+		<div class="dog">Dog</div>
+		<div class="cat">Cat</div>
+		<div class="hamster">Hamster</div>
+		<div class="dog">Dog</div>
+	</div>
+
+	<div class="select">
+		<h2>Direct Child Selector > </h2>
+		<p>Selects elements that are direct descendants. No elements except for those selected will be affected.</p>
+
+		<div class="parent">
+			<div class="uncle">Uncle</div>
+			<div class="child">Child</div>
+			<div class="child">Child</div>
+			<div class="child">Child</div>
+			<div class="weirdCousin">
+				<div class="child">Child</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="select">
+		<h2>Following Selector ~ </h2>
+		<p>Selects elements that follow the preceding element.</p>
+
+		<div class="followMe">
+			<p>I'm a paragraph</p>
+			<p>I'm a paragraph</p>
+			<p>I'm a paragraph</p>
+			<p>I'm a paragraph</p>
+			<img src="http://www.nicenicejpg.com/5.0/300/200" alt="Cool Mustang">
+			<p>I'm a paragraph</p>
+			<p>I'm a paragraph</p>
+			<p>I'm a paragraph</p>
+		</div>
+	</div>
+
+	<div class="select">
+		<h2>Contains exactly - a[href="drewminns"]</h2>
+		<p>Selects elements that contains the text provided.</p>
+
+		<a href="http://drewminns.com">Drew Minns</a>
+		<a href="http://www.drewminns.com">Drew Minns (with www)</a>
+		<a href="http://hackeryou.com">HackerYou</a>
+	</div>
+
+	<div class="select">
+		<h2>Contains - a[href*="text"]</h2>
+		<p>Selects elements that contains the text provided. Bit more relaxed</p>
+
+		<a href="http://hack.ca">Hack.ca</a>
+		<a href="http://google.com">Google</a>
+		<a href="http://hackeryou.com">HackerYou</a>
+	</div>
+
+	<div class="select">
+		<h2>Starts with - a[href^="text"]</h2>
+		<p>Selects all elements that have attributes starting with the provided argument</p>
+
+		<a href="http://google.com">Google.com</a>
+		<a href="https://cibc.ca">CIBC</a>
+		<a href="https://google.com">Google.com</a>
+		<a href="http://tsn.ca">TSN</a>
+	</div>
+
+	<div class="select">
+		<h2>Ends with - a[href$="text"]</h2>
+		<p>Selects all elements that have attributes ending with the provided argument</p>
+
+		<a href="http://google.com">Google.com</a>
+		<a href="http://drewminns.com/logo.png">Drew Minns' logo</a>
+		<a href="http://drewminns.com/face.jpg">Drew Minns' picture</a>
+	</div>
+
+	<div class="select">
+		<h2>Checked - :checked</h2>
+		<p>Target checkboxes when they are in their checked state</p>
+
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+	</div>
+
+	<div class="select">
+		<h2>Checked Examples - :checked</h2>
+
+		<input type="checkbox" class="toggle">
+		<div class="showMe">I can be hidden</div>
+	</div>
+
+	<div class="select">
+		<h2>Not - :not</h2>
+		<p>Select elements except those that supplied in an argument</p>
+
+		<div class="items">
+			<p class="item1">Item # 01</p>
+			<p class="item2">Item # 02</p>
+			<p class="item3">Item # 03</p>
+			<p class="item4">Item # 04</p>
+			<p class="item5">Item # 05</p>
+			<p class="item6">Item # 06</p>
+			<p class="item7">Item # 07</p>
+			<p class="item8">Item # 08</p>
+			<p class="item9">Item # 09</p>
+			<p class="item10">Item # 10</p>
+		</div>
+	</div>
+
+	<div class="select">
+		<h2>First Letter = ::first-letter</h2>
+		<p>Selects the first letter of an element. Note the double colons preceding the selector</p>
+
+		<p class="drew">Drew Minns</p>
+	</div>
+
+	<div class="select">
+		<h2>First Line = ::first-line</h2>
+		<p>Selects the first line of text in an element. Note the double colons preceding the selector</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam inventore eaque natus corporis pariatur, quod neque, mollitia. Illo, mollitia modi amet! Ipsam quo incidunt fuga autem aspernatur mollitia, doloremque quisquam!</p>
+	</div>
+
+</div>
+	
+</body>
+</html>

@@ -1,6 +1,395 @@
+.line {
+    stroke: $primaryBlack;
+}
 
-main{
-    section:nth-of-type(1) {
+h4 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: $fontLight;
+    color: $primaryAccent;
+}
+h2 {
+    font-size: 3.45rem;
+    font-weight: $fontLight;
+    margin: 10px;
+    @include media($breakpointFour) {
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    font-size: 1.5rem;
+    @include media($breakpointFour) {
+        font-size: 1.3rem;
+    }
+}
+
+.featured {
+    background-color: $primaryAccent;
+    text-align: center;
+    color: white;
+    
+    h4 {
+        color: $primaryWhite;
+    }
+    p {
+        line-height: 20px;
+        font-weight: $fontLight;
+    }
+
+    img {
+        width: 45px;
+        margin: 0 auto;
+    }
+    ul {
+        display: flex;
+        padding-top: 50px;
+        padding-bottom: 220px;  
+        @include media($breakpointThree) {
+            flex-direction: column;
+            padding-bottom: 100px;
+            li {
+                padding-top: 50px;
+            }
+        }   
+    }
+    .line {
+        stroke: $primaryWhite;
+    }
+    .wrapper {
+        position: relative;
+    }
+}
+
+.videoContainer {
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    bottom: -200px;
+    
+    img {
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 0 25px $transparentBlack;
+    }
+    i {
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        font-size: 15px;
         background-color: $primaryAccent;
+        padding: 25px;
+        margin: 0;
+        border-radius: 60px;
+    }
+    @include media($breakpointTwo) {
+        width: 90%;
+        left: 5%;
+    }
+    @include media($breakpointFour) {
+        width: 100%;
+        left: 0;
+    }
+}
+
+
+.companyMission {
+    padding-top:150px;
+    stroke: $primaryBlack;
+    .wrapper {
+        width: 40%;
+        @include media($breakpointTwo) {
+            width: 70%;
+        }
+    }
+    p {
+        color: $primaryGray;
+        line-height: 20px;
+    }
+    .button {
+        padding: 30px 5px;
+    }
+    .button-primary {
+        color: $primaryWhite;
+    }
+    .button-secondary {
+        color: $primaryGray;
+    }
+    .flex-container {
+        justify-content: center;
+        @include media($breakpointThree) {
+            flex-direction: column;
+        }
+    }
+}
+
+.services {
+    img {
+        width: 40px;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        padding: 50px 0 75px;
+        text-align: left;
+    }
+    li {
+        width: calc((100%/3) - 20px);
+        margin: 10px;
+        padding: 20px 10px 10px;
+        p {
+            color: $primaryGray;
+            line-height: 20px;
+        }
+        @include media($breakpointTwo) {
+            width: calc(100%/2 - 20px)
+        }
+        @include media($breakpointFour) {
+            width: calc(100% - 20px);
+        }
+    }
+    li:hover {
+        box-shadow:  0 0 10px $transparentGray;
+    }
+}
+
+
+
+.contact {
+    background-image: url("../assets/image-3.jpeg");
+    background-size: cover;
+    color: white;
+    .line {
+        stroke: $primaryWhite;
+    }
+    p {
+        font-family: 'Libre Baskerville', serif;
+        font-style: italic;
+        font-size: 1.6rem;
+        font-weight: 300;
+        padding: 0px;  
+    }
+    .wrapper {
+        width: 50%;
+        @include media($breakpointTwo) {
+            width: 90%;
+        }
+    }
+}
+.contactForm {
+    padding: 50px 0;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .selector,
+    input {
+        width: calc(50% - 10px);
+        margin: 10px 5px;
+        display: block;
+        @include media($breakpointFour) {
+            width: calc(100% - 10px);
+        }
+    }
+    select,
+    input {
+        background-color: rgba($primaryBlack, 0.9);
+        border: none;
+        border-radius: 50px;
+        padding: 10px;
+
+        color:$primaryWhite;
+        font-size: 1.2rem;
+        &::placeholder {
+            color: $primaryWhite;
+        }
+    }
+    select {
+        @include appearanceNone;
+        width: 100%;
+    }
+    input[type=submit] {
+        background-color: $primaryColour;
+        width: 33%;
+        &:hover {
+            cursor: pointer;
+        }
+        @include media($breakpointTwo) {
+            width: 30%;
+        }
+        @include media($breakpointThree) {
+            width: 50%;
+        }
+    }
+    .fas {
+        position: absolute;
+        font-size: 20px;
+        color: $primaryAccent;
+        right: 10px;
+        bottom: 8px;
+        z-index: 10;
+    }
+     
+}
+.selector {
+    position: relative;
+}
+
+.projects {
+    .wrapper {
+        width: 40%;
+        @include media($breakpointTwo) {
+            width: 70%;
+        }
+    }
+    p {
+        font-family: 'Libre Baskerville', serif;
+        font-style: italic;
+        font-size: 1.6rem;
+        font-weight: 300;
+        padding: 0px;  
+        color: $primaryGray;
+    }
+}
+.projectButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    figure {
+        margin: 0;
+    }
+    
+}
+
+.galleryCaption {
+    position: absolute;
+    display: none;
+    background-color: transparentize($primaryAccent, 0.2);
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: $primaryWhite;
+    padding-top: 100px;
+
+    h3 {
+        font-weight: 500;   
+        margin-bottom: 2px;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        @include media($breakpointTwo) {
+            font-size: 1.1rem;
+        }
+    }
+    p {
+        color: $primaryWhite;
+        font-size: 1.2rem;
+        margin-top: 2px;
+        @include media($breakpointTwo) {
+            font-size: 1rem;
+        }
+    }
+    .line {
+        padding: 0;
+        height: 40px;
+        width: 40px;
+        stroke: $primaryWhite;
+
+    }
+
+}
+.galleryCard {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    &:hover .galleryCaption {
+        display: block;
+    }
+    img {
+        object-fit: cover;
+    }
+    @include media($breakpointTwo) {
+        width: calc(100%/3);
+    }
+    @include media($breakpointFour) {
+        width: 100%;
+    }
+}
+.doubleCard {
+    width: 40%;
+    flex-grow: 1;
+    @include media($breakpointTwo) {
+        width: 100%/3 * 2;
+    }
+}
+.brands {
+    background-color: $primaryAccent;
+    margin-top: 100px;
+    color: white;
+    .wrapper {
+        position: relative;
+        @include media($breakpointFour) {
+            width: 100%;
+        }
+    }
+
+    blockquote {
+        padding-top: 150px;
+        
+        p {
+            font-size: 2rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        small {
+            font-size: 1.1rem;
+            
+            margin-bottom: 10px;
+            display: block;
+        }
+        .author {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    }
+}
+.bigQuote {
+    color: transparentize($primaryWhite, 0.6);
+    font-size: 18rem;
+    position: absolute;
+    top: 50px;
+    left: 0; right: 0;
+    margin: 0 auto;
+}
+.brandsFlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 25px 0 75px;
+    li {
+        margin: 1%;
+        padding: 20px;
+        width: calc(100%/5 - 2%);
+        @include media($breakpointTwo) {
+            padding: 10px;
+        }
+        @include media($breakpointThree) {
+            width: calc(100%/2 - 2%);
+            padding: 30px;
+        }
+        @include media($breakpointFour) {
+            width: calc(100% - 2%);
+            padding: 75px;
+            padding-top: 10px;
+        }
     }
 }

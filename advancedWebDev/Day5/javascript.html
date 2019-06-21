@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Fun</title>
+
+    <style>
+        .red {
+            color: red;
+            
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="red">Hello</h1>
+    
+    <button onclick="Toggle()">Button</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            // jQuery code goes here. WOah!
+            
+        });
+
+        function Toggle(){
+            var h = $("h1");
+            if(h.hasClass('blue')){
+                h.removeClass('blue');
+            }else{
+                h.addClass('blue');
+            }
+        }
+    </script>
+</body>
+</html>

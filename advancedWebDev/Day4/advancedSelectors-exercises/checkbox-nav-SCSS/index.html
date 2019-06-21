@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Checkbox Slide out nav</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+	<link rel="stylesheet" href="style/style.css"/>
+</head>
+<body>
+	<!-- The input needs to be beside the nav -->
+	<input type="checkbox" id="toggle" name="toggle">
+	<!-- These are siblings -->
+	<ul class="nav">
+	    <li><a href="#home">Home</a></li>
+	    <li><a href="#about">About</a></li>
+	    <li><a href="#gallery">Photos</a></li>
+	    <li><a href="#contact">Contact</a></li>
+	</ul>
+	<div class="wrapper" id="home">
+		<!--
+		    The label for attribute lines up with the input ID
+		    When it is clicked, the browser (un)checks the associated checkbox
+		 -->
+		<label for="toggle"><i class="fa fa-bars"></i> Menu</label>
+		<section class="hero" id="hero">
+			<div class="container">
+				<h1>Save the Bees</h1>
+			</div>
+		</section>
+		<section class="about" id="about">
+			<div class="container">
+				<h2>About the bees</h2>
+				<p>Crucifix bushwick quinoa raw denim. Pitchfork raw denim swag, cardigan keytar quinoa truffaut YOLO ugh helvetica artisan poutine mlkshk succulents. Everyday carry tofu authentic twee, marfa tbh brooklyn. Four loko air plant dreamcatcher tousled godard, vegan yuccie chicharrones gentrify locavore succulents YOLO. Single-origin coffee chia raw denim, slow-carb seitan selfies cornhole poke cold-pressed fanny pack street art synth etsy banjo air plant. Raw denim vegan vexillologist kombucha austin intelligentsia, photo booth microdosing cardigan sustainable pickled. Biodiesel cardigan ennui mlkshk, raclette 90's poke heirloom chia iceland mustache brunch hella vice jean shorts.</p>
+
+				<p>Flexitarian cred tacos, marfa green juice tumblr leggings swag bicycle rights fap hella. Meggings tumblr authentic everyday carry chambray. Shoreditch raclette microdosing activated charcoal bicycle rights, whatever tousled farm-to-table skateboard fashion axe migas umami hot chicken. Man bun readymade fingerstache, crucifix vaporware fam seitan asymmetrical kickstarter gastropub. Keffiyeh leggings drinking vinegar hashtag tousled, etsy crucifix ugh godard butcher kombucha dreamcatcher vexillologist narwhal. Wayfarers tofu you probably haven't heard of them, neutra vaporware try-hard bitters twee shabby chic offal edison bulb VHS. Art party enamel pin put a bird on it PBR&B, freegan echo park VHS raclette.</p>
+
+				<p>Asymmetrical XOXO iceland fashion axe, tilde banjo umami pour-over pickled hammock. Dreamcatcher art party williamsburg, four dollar toast hexagon cred farm-to-table live-edge kombucha flexitarian 90's small batch pork belly. Locavore quinoa gentrify, raw denim kickstarter succulents kinfolk pok pok freegan readymade four loko tousled. Ennui pabst helvetica readymade post-ironic. Pickled everyday carry art party before they sold out artisan typewriter. Messenger bag fam intelligentsia, humblebrag skateboard flexitarian seitan. Pickled chillwave fingerstache polaroid.</p>
+
+				<p>Pork belly tacos lomo, sartorial vegan raclette seitan master cleanse you probably haven't heard of them fap etsy craft beer. Occupy paleo snackwave seitan, tousled mlkshk XOXO. Artisan green juice flannel, pug banjo vape selfies skateboard try-hard butcher etsy wayfarers deep v. Butcher seitan unicorn bicycle rights knausgaard pitchfork. Locavore kombucha biodiesel messenger bag, cornhole umami humblebrag bicycle rights shoreditch fam occupy raclette put a bird on it. Tacos wayfarers dreamcatcher woke, photo booth skateboard glossier banh mi chartreuse etsy PBR&B yr retro green juice. Food truck health goth ugh pour-over, pork belly raclette freegan fingerstache kombucha hoodie keffiyeh distillery aesthetic jianbing bitters.</p>
+			</div>	
+		</section>
+		<section class="save-the-bees" id="save-the-bees">
+			<div class="container">
+				<h2>How to Help</h2>
+				<p>At the heart of biodiversity, ecosystem health, and our own food production is the honey bee, along side other pollinating insects, birds and bats. Together, we can all do our part to help save honey bees and other pollinators, after all, we all share this home called Earth. By helping each other to thrive, we can live in harmony for generations to come. Here are a few easy ways that you can help:</p>
+				<ol>
+					<li>Support local beekeepers who take care of honey bees by buying their products</li>
+					<li>Plant flowers that provide food for pollinators. Some of my favourites include:
+						<ul>
+							<li>Purple Cone Flower</li>
+							<li>New England Aster</li>
+							<li>Blazing Star</li>
+						</ul>
+					</li>
+					<li>Avoid using pesticides and other chemicals on your lawn and garden</li>
+					<li>Avoid spraying or weeding Dandelions, they are a great early food source for pollinators!</li>
+					<li>Create habitat for pollinators. Build a wild bee house, leave your garden clippings at the end of the season, leave un-mulched areas for ground nesting insects, and leave areas of your property to grow wild with native grasses and flowers</li>
+					<li>Avoid buying seeds and plants treated with neonicotinoids. Ask someone at your local greenhouse if you are not sure.</li>
+					<li>Ask the government to ban honey bee killing pesticides</li>
+					<li>Participate in Citizen Science and report your pollinator sightings online so researchers can better detect the range of various species</li>
+					<li>Educate others!</li>
+				</ol>
+				<p>Thanks for your help saving the bees!</p>	
+			</div>
+		</section>
+		<section class="more" id="gallery">
+			<div class="container">
+				<h2>More about the bees</h2>
+				<p>Pork belly tacos lomo, sartorial vegan raclette seitan master cleanse you probably haven't heard of them fap etsy craft beer. Occupy paleo snackwave seitan, tousled mlkshk XOXO. Artisan green juice flannel, pug banjo vape selfies skateboard try-hard butcher etsy wayfarers deep v. Butcher seitan unicorn bicycle rights knausgaard pitchfork. Locavore kombucha biodiesel messenger bag, cornhole umami humblebrag bicycle rights shoreditch fam occupy raclette put a bird on it. Tacos wayfarers dreamcatcher woke, photo booth skateboard glossier banh mi chartreuse etsy PBR&B yr retro green juice. Food truck health goth ugh pour-over, pork belly raclette freegan fingerstache kombucha hoodie keffiyeh distillery aesthetic jianbing bitters.</p>
+				<div class="gallery">
+					<div>
+						<img src="assets/bee1.jpg" alt="Honey bee on a flower">
+					</div>
+					<div>
+						<img src="assets/bee2.jpg" alt="Honey bee on a flower">
+					</div>
+					<div>
+						<img src="assets/bee3.jpg" alt="Honey bee on a flower">
+					</div>
+					<div>
+						<img src="assets/bee4.jpg" alt="Honey bee on a flower">
+					</div>
+					<div>
+						<img src="assets/bee5.jpg" alt="Honey bee on a flower">
+					</div>
+					<div>
+						<img src="assets/bee6.jpg" alt="Honey bee on a flower">
+					</div>
+				</div>
+				<p>Pork belly tacos lomo, sartorial vegan raclette seitan master cleanse you probably haven't heard of them fap etsy craft beer. Occupy paleo snackwave seitan, tousled mlkshk XOXO. Artisan green juice flannel, pug banjo vape selfies skateboard try-hard butcher etsy wayfarers deep v. Butcher seitan unicorn bicycle rights knausgaard pitchfork. Locavore kombucha biodiesel messenger bag, cornhole umami humblebrag bicycle rights shoreditch fam occupy raclette put a bird on it. Tacos wayfarers dreamcatcher woke, photo booth skateboard glossier banh mi chartreuse etsy PBR&B yr retro green juice. Food truck health goth ugh pour-over, pork belly raclette freegan fingerstache kombucha hoodie keffiyeh distillery aesthetic jianbing bitters.</p>
+			</div>	
+		</section>
+		<footer id="contact">
+			<div class="info">
+				<p><a href="http://instagram.com"><i class="fa fa-instagram"></i> Instagram</a></p>
+				<p><a href="http://facebook.com"><i class="fa fa-facebook"></i> Facebook</a></p>
+				<p><a href="mailto:tiffany@hackeryou.com"><i class="fa fa-envelope"></i> Email</a></p>
+			</div>
+			<p>copyright HackerYou</p>
+		</footer>
+	</div>
+
+</body>
+</html>

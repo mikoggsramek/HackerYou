@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shape Animation Challenge</title>
+  <style>
+    .square {
+      /* Set up the normal state */
+      display: block;
+      width: 350px;
+      height: 350px;
+      margin: 200px auto;
+      background:#41A9F0;
+      /* apply the animation */
+      animation:box 5s linear infinite;
+      transition:all 1s;
+    }
+
+    @keyframes box {
+      0% {
+        transform: scale(0.2) rotate(0deg);
+        border-radius: 0;
+      }
+
+      50% {
+       transform: scale(2) rotate(180deg);
+       border-radius: 50%;
+       background:#5ABE8A;
+
+      }
+      100% {
+        transform: scale(0.2) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="square"></div>
+</body>
+</html>

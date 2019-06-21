@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Custom Cursors</title>
+    <!-- load in google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+    <!-- styles -->
+    <style>
+
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 50px;
+        }
+
+        header,
+        section {
+            min-height: 50vh;
+            padding: 0 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {background-color: #fdcb6e;}
+        .peach {background-color: #e17055;}
+        .poop {background-color: #57606f;}
+        .cat {background-color: #0984e3;}
+        .scott {background-color: #a29bfe;}
+
+        header {
+            cursor: not-allowed;
+        }
+
+        .peach {
+            cursor: url("assets/peach-emoji.png"), auto ;
+        }
+
+        .poop {
+            cursor: url("assets/poop-emoji.png"), auto;
+        }
+
+        .cat {
+            cursor: url("assets/cat.png");
+        }
+
+        .scott {
+            cursor: url("assets/scott.png"), auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Custom Cursors Yeah</h1>
+        </header>
+
+        <section class="peach">
+            <h2>All About Peaches</h2>
+            <p>Its a fruit and a color. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt in reprehenderit quos, neque architecto sed. Veniam commodi aperiam inventore magni. Nam, laborum. Sequi dolorem earum, incidunt numquam adipisci debitis, beatae expedita ut nobis deleniti reprehenderit sint maxime laudantium, autem officia.</p>
+        </section>
+
+        <section class="poop">
+            <h2>All About Chocolate Froyo</h2>
+            <p>Is it chocolate froyo? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga perspiciatis, laudantium ad odio vitae obcaecati fugiat. Adipisci modi quos ratione porro, labore illum sequi saepe odit beatae vitae ut, repellat neque itaque nobis aspernatur soluta nulla quaerat ullam dignissimos praesentium.</p>
+        </section>
+
+        <section class="cat">
+            <h2>All About Meow</h2>
+            <p>Why would u have a dog? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime exercitationem iste repellendus sunt reprehenderit ratione eligendi corporis modi officia blanditiis quae sit quas deserunt quod magni voluptas a dicta non odit libero, repellat dolorum eaque? Aliquam ab totam iusto quasi!</p>
+        </section>
+
+        <section class="scott">
+            <h2>All About Scott</h2>
+            <p>Did you know he croquets? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quo eaque expedita ipsum mollitia velit doloremque voluptatibus ullam officia, cumque perferendis quidem eligendi, nisi exercitationem ad ea temporibus beatae, debitis quod tempora! Reiciendis beatae facilis similique nihil consequuntur, fuga consequatur?</p>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+@import 'setup';
+@import 'base';
+
+//  nav code to do:
+// select the navigation and style it accordingly, we will need to use positioning for this
+.nav {
+	position: fixed;
+	right: -30%;
+	top:0;
+	bottom: 0;
+	background: black;
+	list-style: none;
+	width: 30%;
+	margin: 0;
+	padding: 0;
+	z-index: 9;
+	transition: all 1s;
+}
+
+.nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 40px;
+	padding: 20px;
+	display: inline-block;
+	width: 100%;
+}	
+
+.nav li {
+	width: 100%;
+}
+// lets set a width on the nav, and use a clever right value to get it off the page
+// select the wrapper and style it. We will need to make it position relative to finish styling the nav. 
+.wrapper {
+	position: relative;
+	left: 0;
+	transition: all 1s;
+}
+ // Select the wrapper and set a default of left:0; so we can transition it 
+
+input:checked + .nav {
+	right: 0;
+}
+
+input:checked ~ .wrapper {
+	left: -30%;
+}
+ // When the input is checked, grab the next sibling nav with the + selector 
+ // when the input is checked, select the ul.nav and set it back to right:0; ( It was at right:-30%; )
+ // When the input is checked, slide the wrapper over as well 
+ 
+input {
+ 	display: none;
+}
+
+label {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	color: white;
+}
+// hide the input, we don't need to see it 
+// position the menu so that it doesn't slide off screen when we open it
+

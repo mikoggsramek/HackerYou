@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hamburger Code Along</title>
+	<!-- Add meta tag to access responsive media queries: -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Add in the link to fontawesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	
+	<!-- Add in our stylesheet -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<div class="container">
+			<h1>Canoe Shop</h1>
+
+			<p class="hamburger"><i class="fas fa-bars"></i></p>
+			<div class="menu">
+				<ul>
+					<li class="exit-responsive"><i class="fas fa-times"></i></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Tours</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</main>
+
+	<!-- Load in jQuery -->
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script>
+	$(function() {
+		// write a document ready
+		// write a function that listens to a click on the hamburger menu
+		// toggle class show on the menu
+		// write a function that listens to a click on the exit icon
+		// toggle class show on the menu
+		$('.hamburger').click(function() {
+			$('.menu').addClass('show');
+		});
+		$('.exit-responsive').click(function() {
+			$('.menu').removeClass('show');
+		});
+	});
+	</script>
+		
+
+
+</body>
+</html>

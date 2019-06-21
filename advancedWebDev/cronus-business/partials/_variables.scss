@@ -5,11 +5,23 @@ $primaryAccent: #ed145b;
 $secondaryAccent: #0d4ef7;
 
 $primaryBlack: #171717;
-$primaryGray: #f1f8fc;
+$primaryGray: #bcbebe;
 $primaryWhite: #fff;
 
 $lightPrimary: lighten(transparentize($primaryAccent, 0.4), 20);
 $lightAccent: lighten(transparentize($secondaryAccent, 0.4), 20);
+$lightGray: lighten($primaryGray, 5);
+$transparentBlack: transparentize($primaryBlack, 0.4);
+$transparentGray: transparentize($primaryGray, 0.4);
 
 
 $anchorTagHoverFocus: "a:hover, a:focus";
+
+
+$fontLight: 600;
+$fontThick: 800;
+
+$breakpointOne: 1000px;
+$breakpointTwo: 728px;
+$breakpointThree: 542px;
+$breakpointFour: 320px;

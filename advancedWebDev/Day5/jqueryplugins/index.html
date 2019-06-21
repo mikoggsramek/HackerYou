@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Plugins</title>
+	<link href='https://fonts.googleapis.com/css?family=Poppins:600|Rubik' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+	<style>
+		article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+		input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+		
+		.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+		
+		* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+		html {
+			font-size: 10px;
+			font-size: 62.5%;
+		}
+
+		body {
+			font-family: 'Rubik', sans-serif;
+			font-size: 1.5rem;
+			background: white;
+			color: white;
+		}
+
+		p {
+			font-size: 1.5rem;
+		  line-height: 1.7;
+		  margin: 0 0 1.5rem 0;
+		}
+
+		h1, h2, h3, h4, h5 {
+		  margin: 2rem 0 1.5rem;
+		  font-family: 'Poppins', sans-serif;
+		}
+
+		h1 { font-size: 4rem; }
+		h2 { font-size: 3rem; }
+		h3 { font-size: 2.4rem; }
+		h4 { font-size: 1.8rem; }
+
+		.wrapper {
+			max-width: 1080px;
+			margin: 0 auto;
+		}
+
+		header {
+			background: #FCFCFC;
+			position: fixed;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 999;
+		}
+
+		header a {
+			color: #222;
+			text-decoration: none;
+		}
+
+		header h1 {
+			float: left;
+			margin: 0;
+		}
+
+		header nav {
+			float: right;
+		}
+
+		header ul li {
+			float: left;
+			list-style: none;
+			margin: 0 10px;
+			text-transform: lowercase;
+		}
+
+		section, footer {
+			padding: 140px;
+			text-align: center;
+		}
+
+		footer a { color: white; }
+
+		.intro { margin-top: 75px; }
+		.intro h2 { font-size: 6rem; }
+
+		.intro, .portfolio {
+			background: #1920FE;
+		}
+
+		.about, footer.contact {
+			background: #111;
+		}
+
+		.about img {
+			float: left;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+	<header class="clearfix">
+		<div class="wrapper">
+			<h1><a href="#">utility</a></h1>
+			<nav>
+				<ul class="clearfix">
+					<li><a href="#about">About</a></li>
+					<li><a href="#portfolio">portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- This is the hero section -->
+	<section class="intro">
+		<div class="wrapper">
+			<h2>welcome</h2>
+		</div>
+	</section>
+
+	<!-- This is the about section -->
+	<section class="about" id="about">
+		<div class="wrapper clearfix">
+			<h3>About Utility</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro beatae hic aperiam ipsum deleniti, molestiae culpa molestias. Sapiente autem magnam velit doloremque minima fugit, officiis quam dolore voluptatum, mollitia esse?</p>
+			<img src="http://unsplash.it/g/250/250?random" alt="">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum adipisci optio accusamus nemo ab recusandae provident voluptatibus. Placeat a itaque, numquam consequatur ea molestias. Aperiam facilis molestiae id, veritatis explicabo.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum adipisci optio accusamus nemo ab recusandae provident voluptatibus. Placeat a itaque, numquam consequatur ea molestias. Aperiam facilis molestiae id, veritatis explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sit debitis eaque dolores rerum quidem quia, recusandae ipsam adipisci at iste doloremque ea possimus, dicta! Quaerat architecto quo rem alias?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum adipisci optio accusamus nemo ab recusandae provident voluptatibus. Placeat a itaque, numquam consequatur ea molestias. Aperiam facilis molestiae id, veritatis explicabo.</p>
+		</div>
+	</section>
+
+	<section class="portfolio" id="portfolio">
+		<div class="wrapper">
+			<h3>Our Work</h3>
+			<div class="gallery">
+				<div class="galleryItem"><img src="image1.jpeg" alt=""></div>
+				<div class="galleryItem"><img src="image2.jpeg" alt=""></div>
+				<div class="galleryItem"><img src="image3.jpeg" alt=""></div>
+				<div class="galleryItem"><img src="image4.jpeg" alt=""></div>
+				<div class="galleryItem"><img src="image5.jpeg" alt=""></div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="contact" id="contact">
+		<div class="wrapper">
+			<h3>reach out to us</h3>
+			<p>let's chat <a href="mailto:email@party.club">email@party.club</a></p>
+		</div>
+	</footer>
+
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<!-- Load any other plugins here: -->
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js'></script>
+	
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	
+
+	<script>
+	   $(function() {
+		   $('.gallery').flickity({
+			   wrapAround:true
+		   });
+
+		   $('a').smoothScroll({
+			   speed: 900,
+			   offset: 50
+		   });
+	   });
+	</script>
+	
+</body>
+</html>

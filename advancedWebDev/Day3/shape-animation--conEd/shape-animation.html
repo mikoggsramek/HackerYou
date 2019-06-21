@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shape Animation Challenge</title>
+  <style>
+
+    .square {
+      /* Set up the normal state */
+      display: block;
+      width:350px;
+      height:350px;
+      margin: 200px auto;
+      background:#41A9F0;
+      /* apply the animation */
+      animation: box 5s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    @keyframes box {
+      0% {
+        transform: scale(0.3);
+      }
+      50% {
+        border-radius: 50%;
+        background-color: aquamarine;
+        transform: scale(2) rotate(180deg);
+      }
+      100% {
+        border-radius: none;
+        transform: scale(0.3) rotate(360deg);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- HINTS
+    1) Open shape-animation-ANSWER.html in your browser and try to create the final product.
+    2) Create a keyframe named box.
+    3) There are three points to this animation, starts off as a square, then a circle (background color for the circle is #5ABE8A), then back to a square.  
+    Hint: You will need the properties border-radius and transform -->
+  <div class="square"></div>
+
+</body>
+</html>

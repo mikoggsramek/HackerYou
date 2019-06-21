@@ -1,0 +1,89 @@
+.footer {
+    background-color: $primaryBlack;
+    color: darken($primaryGray,20);
+    text-align: left;
+    margin-top: 100px;
+    padding: 50px 0;
+    line-height: 20px;  
+    h4 {
+        color: $lightGray;
+    }
+    .logo {
+        width: 50%;
+        padding-bottom: 18px;
+        @include media($breakpointTwo) {
+            width: 25%;
+        }
+        @include media($breakpointFour) {
+            width: 50%;
+        }
+    }
+    .wrapper {
+        display: flex;
+        @include media($breakpointTwo) {
+            flex-direction: column;
+        }
+    }
+    section {
+        margin: 2%;
+        width: 100%/3 - 4%;
+        @include media($breakpointTwo) {
+            width: 100%;
+        }
+    }
+    h4 {
+        padding-bottom: 20px;
+        margin: 12px 0 0;
+    }
+    iframe {
+        margin-top: 12px;
+    }
+    
+}
+
+.contactFlex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    align-items: center;
+    p{
+        width: 50%;
+    }
+}
+.contactTitle {
+    margin: 0;
+    line-height: 12px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+.contactText {
+    margin: 0;
+    color: $lightGray;
+}
+.hoursFlex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: $lightGray;
+    li {
+        width: 50%;
+        text-align: left;
+        text-transform: uppercase;
+        padding: 5px 0;
+        &:nth-of-type(2n){
+            text-align: right;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.socialFlex {
+    padding-top: 15px;
+    color: $primaryWhite;
+    font-size: 1.3rem;
+    i {
+        padding-right: 15px;
+    }
+}

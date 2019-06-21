@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery </title>
+  <style>
+    a {
+      display: block;
+      width: 100%;
+    }
+
+    .box {
+      margin: 20px;
+      display: none;
+    }
+
+    .box1 {
+      background: red;
+    }
+
+    .box2 {
+      background: green;
+    }
+
+    .box3 {
+      background: blue;
+    }
+
+    .box4 {
+      background: yellow;
+    }
+
+    .box.open {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<a href="#" class="readMore">Read More</a>
+<div class="box box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, sequi qui dolor distinctio atque sapiente illo mLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.axime maiores assumenda aperiam. Quibusdam nisi officia porro obcaecati fuga aliquam saepe assumenda cupiditate.</div>
+
+
+
+<a href="#" class="readMore">Read More</a>
+<div class="box box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, ut cupiditate ipsam esse. At, possimus, teneLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.tur consequatur voluptates nihil magnam officia vero illo nisi unde adipisci deserunt ipsum dolore dolor.</div>
+
+
+
+<a href="#" class="readMore">Read More</a>
+<div class="box box3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, nisi, unde, aspernatur facere ipsa repellendus labore ipsum ab magnam natus quibusdam qui ratione nulla veritatis possimus? Dolorem magni culpa sequi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.</div>
+
+
+
+<a href="#" class="readMore">Read More</a>
+<div class="box box4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, voluptas, perferendis, tempore, enim autem aut adipisci veritatis ipsum beatae quaerat eveniet ea nam? Fugit, inventore perferendis molestiae dolorum iusto consectetur.</div>
+
+<!-- load jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  // create your document ready
+  // target links with a readmore class
+  // identify when that link is clicked
+  // target the element next to the clicked link and toggle the class of open so that it appears
+  // make sure only one box is open at a time
+  $(function() {
+    $('a.readMore').click(function() {
+      $('.open').removeClass('open');
+      $(this).next().toggleClass('open');
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery One</title>
+  <style>
+    .box {
+      width:200px;
+      height:200px;
+      margin:20px;
+      float:left;
+      /* transform: scale(1); */
+      transition: height 1s;
+    }
+    .box1 {background:red;}
+    .box2 {background:green;}
+    .box3 {background:blue;}
+    .box4 {background:yellow;}
+
+    .open {
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+<div class="box box4"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  // Document ready start
+  $(function() {
+    $('.box').hover(function() {
+      $(this).toggleClass('open');
+    });
+  }); // end document ready
+</script>
+
+</body>
+</html>

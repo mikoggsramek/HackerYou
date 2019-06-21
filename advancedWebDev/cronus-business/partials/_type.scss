@@ -1,13 +1,32 @@
 h1,
 h2,
 h3,
+h4,
 p,
-a {
+a,
+small {
     font-family: 'Nunito', sans-serif;
-    font-weight: 800;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+a{
+    font-weight: $fontThick;
+}
+
+p {
+    font-weight: $fontLight;
 }
 
 em {
     font-family: 'Libre Baskerville', serif;
     font-weight: 100;
+}
+
+.authorTitle {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;      
 }

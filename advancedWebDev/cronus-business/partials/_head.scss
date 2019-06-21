@@ -1,28 +1,55 @@
+
+
 h1 {
     // padding-top: 150px;
     margin  : 0;
     font-size: 6.9rem;
+    @include media($breakpointOne) {
+        font-size: 6rem;
+    }
+    @include media($breakpointTwo) {
+        font-size: 5rem;
+    }
+    @include media($breakpointFour) {
+        font-size: 2.5rem;
+    }
 }
 
-.imageIndex p {
-    font-size: 1.3rem;
-    padding: 5px 0;
-}
+
 
 .vertical {
     writing-mode: vertical-lr;
 }
 
+.scroll {
+    position: absolute;
+    bottom: 25px;
+    
+    // padding-left: 50px;
+    left: calc(50% - 25px);
+    p {
+        transform: rotateZ(90deg);
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+    svg {
+        padding-top: 25px;
+        width: 25px;
+    }
+
+}
+
 header {
     background-image: linear-gradient(to top right, $lightAccent 40%, $lightPrimary 60%), url("../assets/image-1.jpeg");
     background-size: cover;
-    background-position-y: 75%;
+    background-position-y: 70%;
     min-height: 100vh;
     text-align: center;
+    position: relative;
     // padding:2%;
     padding: 2% 25px;
 
-    
+    // color: $primaryWhite;
     .wrapper {
         width: 100%;
         max-width: 100%;
@@ -38,7 +65,7 @@ header {
     p,
     h1,
     a {
-        color:white;
+        color:$primaryWhite;
     }
     ul {
         flex: 0 0 50%;
@@ -49,7 +76,7 @@ header {
     a,
     p {
         font-size: 1.2rem;
-        font-weight: 600;
+        font-weight: $fontLight;
     }
     p {
         text-transform: uppercase;
@@ -58,21 +85,41 @@ header {
     figure {
         margin: 0;
         padding: 0 0px;
+        flex: 0 0 25%;
+    }
+    aside {
+        flex: 0 0 25%;
+        @include media($breakpointThree) {
+            display: none;
+        }
+    }
+    aside:last-of-type {
+        text-align: right;
+        
     }
 
     .flex-container {
         padding-top: 150px;
         justify-content: space-between;
         align-items: center;
-        div {
+        .middleFlex{
             flex: 0 0 50%;
+            @include media($breakpointThree) {
+                flex: 1 0 100%;
+            }
+        }
+
+        @include media($breakpointThree) {
+            justify-content: center;
         }
     }
 
     nav figure:last-of-type {
         display: flex;
         align-items: center;
-        margin-left: 22px;
+        // margin-left: 22px;
+        justify-content: flex-end;
+        text-align: right;
         .fas {
             font-size: 1.2rem;
         }
@@ -86,11 +133,107 @@ header {
             width: $size;
             height: $size;
         }
+        @include media($breakpointTwo) {
+            display: none;
+        }
     }
-
+    .logo {
+        width: 33%;
+        @include media($breakpointOne) {
+            width: 50%;
+        }
+        @include media($breakpointTwo) {
+            width: 70%;
+        }
+        @include media($breakpointThree) {
+            width: 90%;
+        }
+        @include media($breakpointFour) {
+            width: 100%;
+        }
+    }
 }
 
 aside p {
     text-transform: lowercase;
 }
 
+.imageIndex{
+    position: relative;
+    p {
+        font-size: 1.3rem;
+        padding: 5px 0;
+    }
+    i {
+        position: absolute;
+        right:3px;
+        top:7px;
+        transform: scale(-1.5,1.5);
+        color: rgba(255,255,255,0.8);
+    }
+}
+
+.hamburger {
+    position: fixed;
+    font-size: 3rem;
+    text-shadow: 1px 1px 0 $primaryBlack;
+    z-index: 50;
+    display: none;
+    @include media($breakpointTwo) {
+        display: block;
+    }
+}
+.hamburger,
+.exit-responsive {
+    cursor: pointer;
+    font-size: 3rem;
+}
+.topMenu {
+    display: flex;
+    @include media($breakpointTwo) {
+        display: none;
+    }
+}
+.hamburger {
+    right: 20px;
+    top: 10px;
+}
+.exit-responsive {
+    right: 22px;
+    top: 0px;
+ }  
+.exit-responsive {
+    position: absolute;
+}
+
+.fullScreenMenu {
+    ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        @include absoluteFill;
+        li {
+            padding: 25px;
+        }
+        a {
+            font-size: 2rem;
+            
+        }
+    }
+    @include absoluteFill;
+    position: fixed;
+    background: $primaryBlack;
+    color: $primaryWhite;
+    z-index: 20;
+    display: none;
+    // font-size: 20rem;
+    
+    
+}
+
+//This is for jQuery button!
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}

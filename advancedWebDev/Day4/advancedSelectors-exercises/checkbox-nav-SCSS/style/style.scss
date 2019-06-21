@@ -1,0 +1,14 @@
+@import 'setup';
+@import 'base';
+
+//  nav code to do:
+// select the navigation and style it accordingly, we will need to use positioning for this
+// lets set a width on the nav, and use a clever right value to get it off the page
+// select the wrapper and style it. We will need to make it position relative to finish styling the nav. 
+// Select the wrapper and set a default of left:0; so we can transition it 
+// When the input is checked, grab the next sibling nav with the + selector 
+// when the input is checked, select the ul.nav and set it back to right:0; ( It was at right:-30%; )
+// When the input is checked, slide the wrapper over as well 
+// hide the input, we don't need to see it 
+// position the menu so that it doesn't slide off screen when we open it
+
