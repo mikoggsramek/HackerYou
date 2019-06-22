@@ -72,15 +72,22 @@ h3 {
         border-radius: 5px;
         box-shadow: 0 0 25px $transparentBlack;
     }
-    i {
+    .playButton {
         position: absolute;
-        top: 45%;
-        left: 45%;
-        font-size: 15px;
-        background-color: $primaryAccent;
-        padding: 25px;
-        margin: 0;
-        border-radius: 60px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+        margin: auto;
+        height: 65px;
+        
+        i {
+            padding: 25px;
+            font-size: 15px;
+            background-color: $primaryAccent;
+            border-radius: 60px;
+        }
     }
     @include media($breakpointTwo) {
         width: 90%;
@@ -159,7 +166,7 @@ h3 {
 .contact {
     background-image: url("../assets/image-3.jpeg");
     background-size: cover;
-    color: white;
+    color: $primaryWhite;
     .line {
         stroke: $primaryWhite;
     }
@@ -236,6 +243,9 @@ h3 {
     position: relative;
 }
 
+/*****
+* PROJECTS STYLING
+*****/
 .projects {
     .wrapper {
         width: 40%;
@@ -255,17 +265,36 @@ h3 {
 .projectButtons {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    a{
+        color: $primaryGray;
+        margin: 20px;
+        font-size: 1.2rem; 
+    }
 }
 
+.activeProjectsButton {
+    padding: 10px 5px;
+    background-color: $primaryAccent;   
+    border-radius: 50px;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 15px $primaryGray;
+    a {
+        color: $primaryWhite;
+    }
+}
+/*****
+* GALLERY STYLING
+*****/
 .gallery {
     display: flex;
     flex-wrap: wrap;
     figure {
         margin: 0;
     }
-    
 }
-
 .galleryCaption {
     position: absolute;
     display: none;
@@ -331,10 +360,14 @@ h3 {
         width: 100%/3 * 2;
     }
 }
+
+/*****
+* BRANDS STYLING
+*****/
 .brands {
     background-color: $primaryAccent;
     margin-top: 100px;
-    color: white;
+    color: $primaryWhite;
     .wrapper {
         position: relative;
         @include media($breakpointFour) {
@@ -386,10 +419,10 @@ h3 {
             width: calc(100%/2 - 2%);
             padding: 30px;
         }
-        @include media($breakpointFour) {
-            width: calc(100% - 2%);
-            padding: 75px;
-            padding-top: 10px;
-        }
+        // @include media($breakpointFour) {
+        //     width: calc(100% - 2%);
+        //     padding: 75px;
+        //     padding-top: 10px;
+        // }
     }
 }

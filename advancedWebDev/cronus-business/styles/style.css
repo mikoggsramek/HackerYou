@@ -304,7 +304,7 @@ h1 {
   @media only screen and (max-width: 728px) {
     h1 {
       font-size: 5rem; } }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 390px) {
     h1 {
       font-size: 2.5rem; } }
 
@@ -333,14 +333,14 @@ header {
   background-image: -o-linear-gradient(bottom left, rgba(112, 150, 250, 0.6) 40%, rgba(244, 115, 157, 0.6) 60%), url("../assets/image-1.jpeg");
   background-image: linear-gradient(to top right, rgba(112, 150, 250, 0.6) 40%, rgba(244, 115, 157, 0.6) 60%), url("../assets/image-1.jpeg");
   background-size: cover;
-  background-position-y: 70%;
+  background-position: top;
   min-height: 100vh;
   text-align: center;
   position: relative;
   padding: 2% 25px; }
   header .wrapper {
     width: 100%;
-    max-width: 100%; }
+    max-width: 1350px; }
   header nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -351,6 +351,8 @@ header {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+    header nav li a:hover {
+      color: #ed145b; }
   header .fas,
   header p,
   header h1,
@@ -373,6 +375,9 @@ header {
   header p {
     text-transform: uppercase;
     margin: 0; }
+    @media only screen and (max-width: 390px) {
+      header p {
+        font-size: 1rem; } }
   header figure {
     margin: 0;
     padding: 0 0px;
@@ -410,6 +415,9 @@ header {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; } }
+    @media only screen and (max-width: 840px) and (orientation: landscape) {
+      header .flex-container {
+        padding-bottom: 150px; } }
   header nav figure:last-of-type {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -443,7 +451,7 @@ header {
     @media only screen and (max-width: 542px) {
       header .logo {
         width: 90%; } }
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 390px) {
       header .logo {
         width: 100%; } }
 
@@ -466,10 +474,11 @@ aside p {
 
 .hamburger {
   position: fixed;
-  font-size: 3rem;
   text-shadow: 1px 1px 0 #171717;
   z-index: 50;
-  display: none; }
+  display: none;
+  right: 20px;
+  top: 10px; }
   @media only screen and (max-width: 728px) {
     .hamburger {
       display: block; } }
@@ -477,7 +486,7 @@ aside p {
 .hamburger,
 .exit-responsive {
   cursor: pointer;
-  font-size: 3rem; }
+  font-size: 2.5rem; }
 
 .topMenu {
   display: -webkit-box;
@@ -487,16 +496,11 @@ aside p {
     .topMenu {
       display: none; } }
 
-.hamburger {
-  right: 20px;
-  top: 10px; }
-
 .exit-responsive {
-  right: 22px;
-  top: 0px; }
-
-.exit-responsive {
-  position: absolute; }
+  position: absolute;
+  left: 22px;
+  top: 0px;
+  padding: 0; }
 
 .fullScreenMenu {
   position: absolute;
@@ -522,7 +526,7 @@ aside p {
     right: 0;
     bottom: 0;
     left: 0; }
-    .fullScreenMenu ul li {
+    .fullScreenMenu ul li:not(.exit-responsive) {
       padding: 25px; }
     .fullScreenMenu ul a {
       font-size: 2rem; }
@@ -546,13 +550,13 @@ h2 {
   font-size: 3.45rem;
   font-weight: 600;
   margin: 10px; }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 390px) {
     h2 {
       font-size: 2rem; } }
 
 h3 {
   font-size: 1.5rem; }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 390px) {
     h3 {
       font-size: 1.3rem; } }
 
@@ -598,20 +602,24 @@ h3 {
     border-radius: 5px;
     -webkit-box-shadow: 0 0 25px rgba(23, 23, 23, 0.6);
     box-shadow: 0 0 25px rgba(23, 23, 23, 0.6); }
-  .videoContainer i {
+  .videoContainer .playButton {
     position: absolute;
-    top: 45%;
-    left: 45%;
-    font-size: 15px;
-    background-color: #ed145b;
-    padding: 25px;
-    margin: 0;
-    border-radius: 60px; }
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 65px; }
+    .videoContainer .playButton i {
+      padding: 25px;
+      font-size: 15px;
+      background-color: #ed145b;
+      border-radius: 60px; }
   @media only screen and (max-width: 728px) {
     .videoContainer {
       width: 90%;
       left: 5%; } }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 390px) {
     .videoContainer {
       width: 100%;
       left: 0; } }
@@ -668,7 +676,7 @@ h3 {
   @media only screen and (max-width: 728px) {
     .services li {
       width: calc(100%/2 - 20px); } }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 390px) {
     .services li {
       width: calc(100% - 20px); } }
 
@@ -679,7 +687,7 @@ h3 {
 .contact {
   background-image: url("../assets/image-3.jpeg");
   background-size: cover;
-  color: white; }
+  color: #fff; }
   .contact .line {
     stroke: #fff; }
   .contact p {
@@ -710,7 +718,7 @@ h3 {
     width: calc(50% - 10px);
     margin: 10px 5px;
     display: block; }
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 390px) {
       .contactForm .selector,
       .contactForm input {
         width: calc(100% - 10px); } }
@@ -761,6 +769,9 @@ h3 {
 .selector {
   position: relative; }
 
+/*****
+* PROJECTS STYLING
+*****/
 .projects .wrapper {
   width: 40%; }
   @media only screen and (max-width: 728px) {
@@ -781,8 +792,30 @@ h3 {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 25px;
+  padding-top: 10px; }
+  .projectButtons a {
+    color: #bcbebe;
+    margin: 20px;
+    font-size: 1.2rem; }
 
+.activeProjectsButton {
+  padding: 10px 5px;
+  background-color: #ed145b;
+  border-radius: 50px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 5px 5px 15px #bcbebe;
+  box-shadow: 5px 5px 15px #bcbebe; }
+  .activeProjectsButton a {
+    color: #fff; }
+
+/*****
+* GALLERY STYLING
+*****/
 .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -842,7 +875,7 @@ h3 {
   @media only screen and (max-width: 728px) {
     .galleryCard {
       width: calc(100%/3); } }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 390px) {
     .galleryCard {
       width: 100%; } }
 
@@ -855,13 +888,16 @@ h3 {
     .doubleCard {
       width: 66.66667%; } }
 
+/*****
+* BRANDS STYLING
+*****/
 .brands {
   background-color: #ed145b;
   margin-top: 100px;
-  color: white; }
+  color: #fff; }
   .brands .wrapper {
     position: relative; }
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 390px) {
       .brands .wrapper {
         width: 100%; } }
   .brands blockquote {
@@ -908,11 +944,6 @@ h3 {
       .brandsFlexContainer li {
         width: calc(100%/2 - 2%);
         padding: 30px; } }
-    @media only screen and (max-width: 320px) {
-      .brandsFlexContainer li {
-        width: calc(100% - 2%);
-        padding: 75px;
-        padding-top: 10px; } }
 
 .footer {
   background-color: #171717;
@@ -929,7 +960,7 @@ h3 {
     @media only screen and (max-width: 728px) {
       .footer .logo {
         width: 25%; } }
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 390px) {
       .footer .logo {
         width: 50%; } }
   .footer .wrapper {

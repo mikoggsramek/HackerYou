@@ -31,3 +31,11 @@
 		@content;
 	}
 }
+
+@mixin landscapeMedia($width, $height) {
+	@media only screen 
+  	and (max-width: $width) 
+  	and (orientation: landscape) { 
+		@content;
+	}
+}
